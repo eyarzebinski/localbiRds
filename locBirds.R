@@ -1,5 +1,8 @@
-# pull local birds
+# Pull hyperlocal bird reports
+# by: Evelyn Yarzebinski, 2021-11
+# TODO - make auto-publish doc
 
+# set up env
 library(geosphere)
 library(tidyverse)
 library(geosphere)
@@ -29,12 +32,15 @@ for (i in 1:length(dateChoices)) {
   print(paste0(dateChoices[i]," complete"))
 }
 
-# process the data
+# process the data and make good date values
 loc_fin = loc %>%
   filter(subnational2Code == locCounty) %>% # filter for the county - some error cropped up in older years
   mutate(month = substr(obsDt,6,7),
          year = substr(obsDt,1,4),
-         id = row_number()-1) %>%
+         id = row_number()-1)
+
+# now filter for birds showing up only within 5km of the specified coordinates
+loc_fin = loc_fin %>%
   group_by(id) %>%
   mutate(
     dist_km = geosphere::distm(x = c(locLng,locLat), y = c(lng,lat), fun = distHaversine)) %>%
@@ -42,4 +48,5 @@ loc_fin = loc %>%
   mutate(dist_km = as.numeric(dist_km/1000),
          within5km = ifelse(dist_km<=5, 1, 0))
 
+# write the file out
 write.csv(loc_fin, paste0(locName,"_",min(dateChoices),"_",max(dateChoices),".csv"),row.names = F)
