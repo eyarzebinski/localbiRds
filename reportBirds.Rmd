@@ -11,6 +11,16 @@ params:
 
 `r params$test1`
 
+```{r}
+
+# TODO
+# write reflections for each bird family
+# check if the inclusion criteria is complete
+# print to word document
+# loop through data frame and make page break after each chapter
+# is there a method to arrange e.g. 2 birds per page?
+```
+
 ```{r setup, include=FALSE}
 require(knitr)
 df = read.csv("corhaven_unique_birds_season_2022-02-08.csv",stringsAsFactors = F)
