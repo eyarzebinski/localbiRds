@@ -1,0 +1,28 @@
+---
+title: "reportBirds"
+author: "Evelyn Yarzebinski"
+date: "2/9/2022"
+output:
+  html_document:
+    df_print: paged
+params:
+  test1: test
+---
+
+`r params$test1`
+
+```{r setup, include=FALSE}
+require(knitr)
+df = read.csv("corhaven_unique_birds_season_2022-02-08.csv",stringsAsFactors = F)
+```
+
+```{r, echo = F}
+i = 1
+
+urlpic = df$photo[i]
+urlpic = "https://macaulaylibrary.org/asset/285750461/embed/640"
+knitr::include_graphics(urlpic)
+
+```
+
+
