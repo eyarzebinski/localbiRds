@@ -38,7 +38,7 @@ for (i in 1:length(dateChoices)) {
 }
 
 # process the data and make good date values
-loc_fin = loc %>%
+loc_fin = birds %>%
   filter(subnational2Code == locCounty) %>% # filter for the county - some error cropped up in older years
   mutate(month = substr(obsDt,6,7),
          year = substr(obsDt,1,4),
