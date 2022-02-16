@@ -1,0 +1,55 @@
+---
+title: "The Birds of Corhaven"
+author: "Evelyn Yarzebinski & Kevin Soo"
+output:
+  html_document: default
+  word_document: default
+---
+```{r message=FALSE, echo=FALSE}
+# Load libraries
+library(tidyverse)
+
+# Load data
+df <- read_csv("corhaven_unique_birds_season_2022-02-08.csv")
+
+# Get bird families
+fam <- df |> 
+    pull(birdFamily) |> 
+    unique()
+```
+
+
+
+```{r echo=FALSE, results='asis'}
+fam_template <- "## %s
+
+"
+
+species_template <- "### %s
+
+"
+
+# for (i in seq(nrow(input))) {
+#   current <- input[i, ]
+#   cat(sprintf(template, current$name, current$data, current$text))
+# }
+
+for (i in fam) {
+    
+    # Get current bird family
+    fam_current <- i
+    
+    # Get all species within bird family
+    fam_species <- df |>
+        filter(birdFamily == fam_current)
+    
+    # Print bird family section header
+    cat(sprintf(fam_template, fam_current))
+    
+    # For all species within family, print an entry
+    for (j in fam_species$comName) {
+        
+        cat(sprintf(species_template, j))
+    }
+}
+```
