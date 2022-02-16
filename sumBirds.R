@@ -3,12 +3,21 @@ library(tidyverse)
 library(janitor)
 library(tibble)
 
-birdFile = "corhaven"
-nRecent = 10
+# TODO
+# factor levels for liturgical seasons to appear in order as specified in `seasonOrder`
+# consider if any additional criteria for typical birds is missing
+# autojoin liturgical season date boundaries (see @kevin below)
 
-setwd("~/Desktop/personal/coracle/")
+birdFile = "corhaven"
+nRecent = 11
+
+#setwd("~/Desktop/personal/coracle/")
 birds = read.csv(paste0(birdFile,".csv"),stringsAsFactors = F)
+
+# read lookup files
 seenAtLocation = read.csv(paste0(birdFile,"Obs.csv"),stringsAsFactors = F)
+birdFamily = read.csv("birdFamily.csv",stringsAsFactors = F)
+liturgicalSeasonLookup = read.csv("liturgicalDateBoundaries.csv",stringsAsFactors = F)
 
 seasonOrder = c("Advent",
                 "Christmas",
@@ -17,40 +26,56 @@ seasonOrder = c("Advent",
                 "Easter",
                 "Ordinary Time")
 
+liturgicalSeasonLookup = liturgicalSeasonLookup %>%
+  mutate(date = lubridate::mdy(date))
+
 seenAtLocation = seenAtLocation %>%
   select(speciesCode) %>% unlist()
 
-birds_df = as_tibble(birds) %>%
+# filter the hyperlocal birds and make pretty dates
+birds_df = as_tibble(birds1) %>%
   dplyr::filter(within5km == 1,
                 !is.na(howMany)) %>%
-  mutate(obsDate = lubridate::mdy(obsDate),
-         obsMonth = month(obsDate)) %>%
-  select(obsMonth,
-         obsDate,
-         everything())
+  mutate(obsDt = lubridate::ymd(as.Date(obsDt)),
+         obsMonth = month(obsDt),
+         obsYear = year(obsDt)) %>%
+  select(-month)
+
+# join in the bird family information
+birds_df = birds_df %>%
+  left_join(birdFamily, by = "comName")
+
+# join in the liturgical seasons by closest inclusive date from liturgicalSeasonLookup applied to obsDt
+birds_df = birds_df %>%
+  left_join( # TODO @kevin
+    )
 
 # get all years in the supplied df
-years = unlist(sort(unique(birds_df$year)))
+years = unlist(sort(unique(birds_df$obsYear)))
 
 # take the most recent N years that appear in the df
 recentYears = tail(years,nRecent)
 
+# find the unique birds in a given year of data, then pull into wide format
 unique_birds_year = birds_df %>%
-  #mutate(year = as.numeric(as.character(year))) %>%
-  group_by(comName,
+  group_by(birdFamily,
+           comName,
            speciesCode,
-           year) %>%
+           obsYear) %>%
   dplyr::summarize(totalBirds = sum(howMany)) %>%
-  group_by(comName,
+  group_by(birdFamily,
+           comName,
            speciesCode) %>%
   mutate(grandTotal = sum(totalBirds)) %>%
-  pivot_wider(names_from = year,
+  pivot_wider(names_from = obsYear,
               values_from = totalBirds,
               values_fill = 0) %>%
   dplyr::select("comName",
                 sort(colnames(.))) %>%
   ungroup()
 
+# calculate typical birds in a given year
+# see typical_bird for logic of what makes a typical bird
 typical_birds_year = unique_birds_year %>%
   mutate(count_0 = rowSums(unique_birds_year == 0, na.rm = T),
          count_0_Nyears = rowSums(unique_birds_year[,which(colnames(unique_birds_year) %in% min(recentYears)):
@@ -58,18 +83,19 @@ typical_birds_year = unique_birds_year %>%
          mean_all = round(grandTotal/length(years),2),
          mean_years = rowMeans(unique_birds_year[,which(colnames(unique_birds_year) %in% min(recentYears)):
                                                which(colnames(unique_birds_year) %in% max(recentYears))]),
-         typical_bird = case_when(grandTotal >= length(years)*2~1,
+         typical_bird = case_when(grandTotal >= length(years)*2~1, # total birds observed anytime in N years is 2*N or more. So in a 10 year window, both scenarios count: 1) 20 birds in 1 year counts and 2) 2 birds each year for 10 years
                                  count_0/length(years) <= .2 | count_0_Nyears == 0~1,
-                                 mean_years > 10~1,
-                                 mean_years < 1~0,
-                                 unique_birds_year[,which(colnames(unique_birds_year) %in% max(recentYears))]/grandTotal >= .8~1,
+                                 mean_years > nRecent ~1, # the average observed each year is greater than nRecent
+                                 mean_years < 1~0, # the average observed each year is not less than 1 bird per year
+                                 unique_birds_year[,which(colnames(unique_birds_year) %in% max(recentYears))]/grandTotal >= .8~1, # more than 80% of years as defined by nRecent have observations
                                  TRUE~0)) %>%
-  filter(typical_bird == 1 | speciesCode %in% seenAtLocation) 
+  filter(typical_bird == 1 | speciesCode %in% seenAtLocation) # OR ALSO we personally observed the bird while on site at corhaven
 
+# make a list of the typical birds for later lookup
 typical_birds_name = typical_birds_year %>%
   select(comName) %>% unlist()
 
-
+# find unique birds per month to calculate most common liturgical season
 unique_birds_month = birds_df %>%
   filter(comName %in% typical_birds_name) %>%
   #mutate(month = as.numeric(as.character(month))) %>%

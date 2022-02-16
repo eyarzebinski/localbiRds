@@ -1,0 +1,520 @@
+﻿comName,order,birdFamily,scientificName
+Black-bellied Whistling-Duck,Anseriformes,"Anatidae: Swans, Geese & Ducks",Dendrocygna autumnalis
+West Indian Whistling-Duck,Anseriformes,"Anatidae: Swans, Geese & Ducks",Dendrocygna arborea
+Fulvous Whistling-Duck,Anseriformes,"Anatidae: Swans, Geese & Ducks",Dendrocygna bicolor
+Snow Goose,Anseriformes,"Anatidae: Swans, Geese & Ducks",Anser caerulescens
+Snow Goose (Lesser),Anseriformes,"Anatidae: Swans, Geese & Ducks",Anser caerulescens caerulescens
+Snow Goose (Greater),Anseriformes,"Anatidae: Swans, Geese & Ducks",Anser caerulescens atlanticus
+Ross's Goose,Anseriformes,"Anatidae: Swans, Geese & Ducks",Anser rossii
+Greater White-fronted Goose,Anseriformes,"Anatidae: Swans, Geese & Ducks",Anser albifrons
+Brant,Anseriformes,"Anatidae: Swans, Geese & Ducks",Branta bernicla
+Barnacle Goose,Anseriformes,"Anatidae: Swans, Geese & Ducks",Branta leucopsis
+Cackling Goose,Anseriformes,"Anatidae: Swans, Geese & Ducks",Branta hutchinsii
+Canada Goose,Anseriformes,"Anatidae: Swans, Geese & Ducks",Branta canadensis
+Mute Swan,Anseriformes,"Anatidae: Swans, Geese & Ducks",Cygnus olor
+Trumpeter Swan,Anseriformes,"Anatidae: Swans, Geese & Ducks",Cygnus buccinator
+Tundra Swan,Anseriformes,"Anatidae: Swans, Geese & Ducks",Cygnus columbianus
+Wood Duck,Anseriformes,"Anatidae: Swans, Geese & Ducks",Aix sponsa
+Garganey,Anseriformes,"Anatidae: Swans, Geese & Ducks",Spatula querquedula
+Blue-winged Teal,Anseriformes,"Anatidae: Swans, Geese & Ducks",Spatula discors
+Cinnamon Teal,Anseriformes,"Anatidae: Swans, Geese & Ducks",Spatula cyanoptera
+Northern Shoveler,Anseriformes,"Anatidae: Swans, Geese & Ducks",Spatula clypeata
+Gadwall,Anseriformes,"Anatidae: Swans, Geese & Ducks",Mareca strepera
+Eurasian Wigeon,Anseriformes,"Anatidae: Swans, Geese & Ducks",Mareca penelope
+American Wigeon,Anseriformes,"Anatidae: Swans, Geese & Ducks",Mareca americana
+Mallard,Anseriformes,"Anatidae: Swans, Geese & Ducks",Anas platyrhynchos
+American Black Duck,Anseriformes,"Anatidae: Swans, Geese & Ducks",Anas rubripes
+Mottled Duck,Anseriformes,"Anatidae: Swans, Geese & Ducks",Anas fulvigula
+White-cheeked Pintail,Anseriformes,"Anatidae: Swans, Geese & Ducks",Anas bahamensis
+Northern Pintail,Anseriformes,"Anatidae: Swans, Geese & Ducks",Anas acuta
+Green-winged Teal,Anseriformes,"Anatidae: Swans, Geese & Ducks",Anas crecca
+Green-winged Teal (Eurasian),Anseriformes,"Anatidae: Swans, Geese & Ducks",Anas crecca crecca
+Green-winged Teal (American),Anseriformes,"Anatidae: Swans, Geese & Ducks",Anas crecca carolinensis
+Canvasback,Anseriformes,"Anatidae: Swans, Geese & Ducks",Aythya valisineria
+Redhead,Anseriformes,"Anatidae: Swans, Geese & Ducks",Aythya americana
+Ring-necked Duck,Anseriformes,"Anatidae: Swans, Geese & Ducks",Aythya collaris
+Tufted Duck,Anseriformes,"Anatidae: Swans, Geese & Ducks",Aythya fuligula
+Greater Scaup,Anseriformes,"Anatidae: Swans, Geese & Ducks",Aythya marila
+Lesser Scaup,Anseriformes,"Anatidae: Swans, Geese & Ducks",Aythya affinis
+King Eider,Anseriformes,"Anatidae: Swans, Geese & Ducks",Somateria spectabilis
+Common Eider,Anseriformes,"Anatidae: Swans, Geese & Ducks",Somateria mollissima
+Harlequin Duck,Anseriformes,"Anatidae: Swans, Geese & Ducks",Histrionicus histrionicus
+Surf Scoter,Anseriformes,"Anatidae: Swans, Geese & Ducks",Melanitta perspicillata
+White-winged Scoter,Anseriformes,"Anatidae: Swans, Geese & Ducks",Melanitta deglandi
+Black Scoter,Anseriformes,"Anatidae: Swans, Geese & Ducks",Melanitta americana
+Long-tailed Duck,Anseriformes,"Anatidae: Swans, Geese & Ducks",Clangula hyemalis
+Bufflehead,Anseriformes,"Anatidae: Swans, Geese & Ducks",Bucephala albeola
+Common Goldeneye,Anseriformes,"Anatidae: Swans, Geese & Ducks",Bucephala clangula
+Barrow's Goldeneye,Anseriformes,"Anatidae: Swans, Geese & Ducks",Bucephala islandica
+Hooded Merganser,Anseriformes,"Anatidae: Swans, Geese & Ducks",Lophodytes cucullatus
+Common Merganser,Anseriformes,"Anatidae: Swans, Geese & Ducks",Mergus merganser
+Red-breasted Merganser,Anseriformes,"Anatidae: Swans, Geese & Ducks",Mergus serrator
+Ruddy Duck,Anseriformes,"Anatidae: Swans, Geese & Ducks",Oxyura jamaicensis
+Northern Bobwhite,Galliformes,Odontophoridae: New World Quail,Colinus virginianus
+Wild Turkey,Galliformes,Phasianidae: Grouse and Turkeys,Meleagris gallopavo
+Ruffed Grouse,Galliformes,Phasianidae: Grouse and Turkeys,Bonasa umbellus
+Ring-necked Pheasant,Galliformes,Phasianidae: Grouse and Turkeys,Phasianus colchicus
+American Flamingo,Phoenicopteriformes,Phoenicopteridae: Flamingos,Phoenicopterus ruber
+Pied-billed Grebe,Podicipediformes,Podicipedidae: Grebes,Podilymbus podiceps
+Horned Grebe,Podicipediformes,Podicipedidae: Grebes,Podiceps auritus
+Red-necked Grebe,Podicipediformes,Podicipedidae: Grebes,Podiceps grisegena
+Eared Grebe,Podicipediformes,Podicipedidae: Grebes,Podiceps nigricollis
+Western Grebe,Podicipediformes,Podicipedidae: Grebes,Aechmophorus occidentalis
+Clark's Grebe,Podicipediformes,Podicipedidae: Grebes,Aechmophorus clarkii
+Rock Pigeon (Feral Pigeon),Columbiformes,Columbidae: Pigeons and Doves,Columba livia
+White-crowned Pigeon,Columbiformes,Columbidae: Pigeons and Doves,Patagioenas leucocephala
+Eurasian Collared-Dove,Columbiformes,Columbidae: Pigeons and Doves,Streptopelia decaocto
+Common Ground Dove,Columbiformes,Columbidae: Pigeons and Doves,Columbina passerina
+White-winged Dove,Columbiformes,Columbidae: Pigeons and Doves,Zenaida asiatica
+Mourning Dove,Columbiformes,Columbidae: Pigeons and Doves,Zenaida macroura
+Yellow-billed Cuckoo,Cuculiformes,Cuculidae: Cuckoos and Anis,Coccyzus americanus
+Black-billed Cuckoo,Cuculiformes,Cuculidae: Cuckoos and Anis,Coccyzus erythropthalmus
+Groove-billed Ani,Cuculiformes,Cuculidae: Cuckoos and Anis,Crotophaga sulcirostris
+Common Nighthawk,Caprimulgiformes,Caprimulgidae: Goatsuckers,Chordeiles minor
+Chuck-will's-widow,Caprimulgiformes,Caprimulgidae: Goatsuckers,Antrostomus carolinensis
+Eastern Whip-poor-will,Caprimulgiformes,Caprimulgidae: Goatsuckers,Antrostomus vociferus
+Chimney Swift,Apodiformes,Apodidae: Swifts,Chaetura pelagica
+Rivoli's Hummingbird,Apodiformes,Trochilidae: Hummingbirds,Eugenes fulgens
+Ruby-throated Hummingbird,Apodiformes,Trochilidae: Hummingbirds,Archilochus colubris
+Black-chinned Hummingbird,Apodiformes,Trochilidae: Hummingbirds,Archilochus alexandri
+Anna's Hummingbird,Apodiformes,Trochilidae: Hummingbirds,Calypte anna
+Calliope Hummingbird,Apodiformes,Trochilidae: Hummingbirds,Selasphorus calliope
+Rufous Hummingbird,Apodiformes,Trochilidae: Hummingbirds,Selasphorus rufus
+Allen's Hummingbird,Apodiformes,Trochilidae: Hummingbirds,Selasphorus sasin
+Violet-crowned Hummingbird,Apodiformes,Trochilidae: Hummingbirds,Leucolia violiceps
+Paint-billed Crake,Gruiformes,"Rallidae: Rails, Gallinules & Coots",Neocrex erythrops
+Clapper Rail,Gruiformes,"Rallidae: Rails, Gallinules & Coots",Rallus crepitans
+King Rail,Gruiformes,"Rallidae: Rails, Gallinules & Coots",Rallus elegans
+Virginia Rail,Gruiformes,"Rallidae: Rails, Gallinules & Coots",Rallus limicola
+Sora,Gruiformes,"Rallidae: Rails, Gallinules & Coots",Porzana carolina
+Common Gallinule,Gruiformes,"Rallidae: Rails, Gallinules & Coots",Gallinula galeata
+American Coot,Gruiformes,"Rallidae: Rails, Gallinules & Coots",Fulica americana
+Purple Gallinule,Gruiformes,"Rallidae: Rails, Gallinules & Coots",Porphyrio martinicus
+Yellow Rail,Gruiformes,"Rallidae: Rails, Gallinules & Coots",Coturnicops noveboracensis
+Black Rail,Gruiformes,"Rallidae: Rails, Gallinules & Coots",Laterallus jamaicensis
+Limpkin,Gruiformes,Aramidae: Limpkin,Aramus guarauna
+Sandhill Crane,Gruiformes,Gruidae: Cranes,Antigone canadensis
+Black-necked Stilt,Charadriiformes,Recurvirostridae: Stilts and Avocets,Himantopus mexicanus
+American Avocet,Charadriiformes,Recurvirostridae: Stilts and Avocets,Recurvirostra americana
+American Oystercatcher,Charadriiformes,Haematopodidae: Oystercatchers,Haematopus palliatus
+Northern Lapwing,Charadriiformes,Charadriidae: Plovers,Vanellus vanellus
+Black-bellied Plover,Charadriiformes,Charadriidae: Plovers,Pluvialis squatarola
+American Golden-Plover,Charadriiformes,Charadriidae: Plovers,Pluvialis dominica
+Killdeer,Charadriiformes,Charadriidae: Plovers,Charadrius vociferus
+Semipalmated Plover,Charadriiformes,Charadriidae: Plovers,Charadrius semipalmatus
+Piping Plover,Charadriiformes,Charadriidae: Plovers,Charadrius melodus
+Lesser/Greater Sand-Plover,Charadriiformes,Charadriidae: Plovers,Charadrius mongolus/leschenaultii
+Wilson's Plover,Charadriiformes,Charadriidae: Plovers,Charadrius wilsonia
+Mountain Plover,Charadriiformes,Charadriidae: Plovers,Charadrius montanus
+Snowy Plover,Charadriiformes,Charadriidae: Plovers,Charadrius nivosus
+Upland Sandpiper,Charadriiformes,Scolopacidae: Sandpipers,Bartramia longicauda
+Whimbrel (European),Charadriiformes,Scolopacidae: Sandpipers,Numenius phaeopus phaeopus
+Whimbrel,Charadriiformes,Scolopacidae: Sandpipers,Numenius phaeopus
+Whimbrel (Hudsonian),Charadriiformes,Scolopacidae: Sandpipers,Numenius phaeopus hudsonicus
+Long-billed Curlew,Charadriiformes,Scolopacidae: Sandpipers,Numenius americanus
+Bar-tailed Godwit,Charadriiformes,Scolopacidae: Sandpipers,Limosa lapponica
+Black-tailed Godwit,Charadriiformes,Scolopacidae: Sandpipers,Limosa limosa
+Hudsonian Godwit,Charadriiformes,Scolopacidae: Sandpipers,Limosa haemastica
+Marbled Godwit,Charadriiformes,Scolopacidae: Sandpipers,Limosa fedoa
+Ruddy Turnstone,Charadriiformes,Scolopacidae: Sandpipers,Arenaria interpres
+Red Knot,Charadriiformes,Scolopacidae: Sandpipers,Calidris canutus
+Ruff,Charadriiformes,Scolopacidae: Sandpipers,Calidris pugnax
+Sharp-tailed Sandpiper,Charadriiformes,Scolopacidae: Sandpipers,Calidris acuminata
+Stilt Sandpiper,Charadriiformes,Scolopacidae: Sandpipers,Calidris himantopus
+Curlew Sandpiper,Charadriiformes,Scolopacidae: Sandpipers,Calidris ferruginea
+Red-necked Stint,Charadriiformes,Scolopacidae: Sandpipers,Calidris ruficollis
+Sanderling,Charadriiformes,Scolopacidae: Sandpipers,Calidris alba
+Dunlin,Charadriiformes,Scolopacidae: Sandpipers,Calidris alpina
+Purple Sandpiper,Charadriiformes,Scolopacidae: Sandpipers,Calidris maritima
+Baird's Sandpiper,Charadriiformes,Scolopacidae: Sandpipers,Calidris bairdii
+Least Sandpiper,Charadriiformes,Scolopacidae: Sandpipers,Calidris minutilla
+White-rumped Sandpiper,Charadriiformes,Scolopacidae: Sandpipers,Calidris fuscicollis
+Buff-breasted Sandpiper,Charadriiformes,Scolopacidae: Sandpipers,Calidris subruficollis
+Pectoral Sandpiper,Charadriiformes,Scolopacidae: Sandpipers,Calidris melanotos
+Semipalmated Sandpiper,Charadriiformes,Scolopacidae: Sandpipers,Calidris pusilla
+Western Sandpiper,Charadriiformes,Scolopacidae: Sandpipers,Calidris mauri
+Short-billed Dowitcher,Charadriiformes,Scolopacidae: Sandpipers,Limnodromus griseus
+Short-billed Dowitcher (griseus),Charadriiformes,Scolopacidae: Sandpipers,Limnodromus griseus griseus
+Short-billed Dowitcher (hendersoni),Charadriiformes,Scolopacidae: Sandpipers,Limnodromus griseus hendersoni
+Long-billed Dowitcher,Charadriiformes,Scolopacidae: Sandpipers,Limnodromus scolopaceus
+Eurasian Woodcock,Charadriiformes,Scolopacidae: Sandpipers,Scolopax rusticola
+American Woodcock,Charadriiformes,Scolopacidae: Sandpipers,Scolopax minor
+Wilson's Snipe,Charadriiformes,Scolopacidae: Sandpipers,Gallinago delicata
+Terek Sandpiper,Charadriiformes,Scolopacidae: Sandpipers,Xenus cinereus
+Spotted Sandpiper,Charadriiformes,Scolopacidae: Sandpipers,Actitis macularius
+Solitary Sandpiper,Charadriiformes,Scolopacidae: Sandpipers,Tringa solitaria
+Lesser Yellowlegs,Charadriiformes,Scolopacidae: Sandpipers,Tringa flavipes
+Willet,Charadriiformes,Scolopacidae: Sandpipers,Tringa semipalmata
+Willet (Eastern),Charadriiformes,Scolopacidae: Sandpipers,Tringa semipalmata semipalmata
+Willet (Western),Charadriiformes,Scolopacidae: Sandpipers,Tringa semipalmata inornata
+Greater Yellowlegs,Charadriiformes,Scolopacidae: Sandpipers,Tringa melanoleuca
+Wilson's Phalarope,Charadriiformes,Scolopacidae: Sandpipers,Phalaropus tricolor
+Red-necked Phalarope,Charadriiformes,Scolopacidae: Sandpipers,Phalaropus lobatus
+Red Phalarope,Charadriiformes,Scolopacidae: Sandpipers,Phalaropus fulicarius
+Great Skua,Charadriiformes,Stercorariidae: Jaegers and Skuas,Stercorarius skua
+South Polar Skua,Charadriiformes,Stercorariidae: Jaegers and Skuas,Stercorarius maccormicki
+Pomarine Jaeger,Charadriiformes,Stercorariidae: Jaegers and Skuas,Stercorarius pomarinus
+Parasitic Jaeger,Charadriiformes,Stercorariidae: Jaegers and Skuas,Stercorarius parasiticus
+Long-tailed Jaeger,Charadriiformes,Stercorariidae: Jaegers and Skuas,Stercorarius longicaudus
+Dovekie,Charadriiformes,"Alcidae: Puffins, Murres & Auks",Alle alle
+Common Murre,Charadriiformes,"Alcidae: Puffins, Murres & Auks",Uria aalge
+Thick-billed Murre,Charadriiformes,"Alcidae: Puffins, Murres & Auks",Uria lomvia
+Razorbill,Charadriiformes,"Alcidae: Puffins, Murres & Auks",Alca torda
+Black Guillemot,Charadriiformes,"Alcidae: Puffins, Murres & Auks",Cepphus grylle
+Ancient Murrelet,Charadriiformes,"Alcidae: Puffins, Murres & Auks",Synthliboramphus antiquus
+Atlantic Puffin,Charadriiformes,"Alcidae: Puffins, Murres & Auks",Fratercula arctica
+Black-legged Kittiwake,Charadriiformes,"Laridae: Gulls, Terns & Skimmers",Rissa tridactyla
+Sabine's Gull,Charadriiformes,"Laridae: Gulls, Terns & Skimmers",Xema sabini
+Bonaparte's Gull,Charadriiformes,"Laridae: Gulls, Terns & Skimmers",Chroicocephalus philadelphia
+Black-headed Gull,Charadriiformes,"Laridae: Gulls, Terns & Skimmers",Chroicocephalus ridibundus
+Little Gull,Charadriiformes,"Laridae: Gulls, Terns & Skimmers",Hydrocoloeus minutus
+Laughing Gull,Charadriiformes,"Laridae: Gulls, Terns & Skimmers",Leucophaeus atricilla
+Franklin's Gull,Charadriiformes,"Laridae: Gulls, Terns & Skimmers",Leucophaeus pipixcan
+Black-tailed Gull,Charadriiformes,"Laridae: Gulls, Terns & Skimmers",Larus crassirostris
+Heermann's Gull,Charadriiformes,"Laridae: Gulls, Terns & Skimmers",Larus heermanni
+Mew Gull,Charadriiformes,"Laridae: Gulls, Terns & Skimmers",Larus canus
+Mew Gull (European),Charadriiformes,"Laridae: Gulls, Terns & Skimmers",Larus canus canus
+Mew Gull (American),Charadriiformes,"Laridae: Gulls, Terns & Skimmers",Larus canus brachyrhynchus
+Ring-billed Gull,Charadriiformes,"Laridae: Gulls, Terns & Skimmers",Larus delawarensis
+California Gull,Charadriiformes,"Laridae: Gulls, Terns & Skimmers",Larus californicus
+Herring Gull,Charadriiformes,"Laridae: Gulls, Terns & Skimmers",Larus argentatus
+Yellow-legged Gull,Charadriiformes,"Laridae: Gulls, Terns & Skimmers",Larus michahellis
+Iceland Gull,Charadriiformes,"Laridae: Gulls, Terns & Skimmers",Larus glaucoides
+Iceland Gull (Kumlien's),Charadriiformes,"Laridae: Gulls, Terns & Skimmers",Larus glaucoides kumlieni
+Iceland Gull (Thayer's),Charadriiformes,"Laridae: Gulls, Terns & Skimmers",Larus glaucoides thayeri
+Lesser Black-backed Gull,Charadriiformes,"Laridae: Gulls, Terns & Skimmers",Larus fuscus
+Glaucous Gull,Charadriiformes,"Laridae: Gulls, Terns & Skimmers",Larus hyperboreus
+Great Black-backed Gull,Charadriiformes,"Laridae: Gulls, Terns & Skimmers",Larus marinus
+Brown Noddy,Charadriiformes,"Laridae: Gulls, Terns & Skimmers",Anous stolidus
+Sooty Tern,Charadriiformes,"Laridae: Gulls, Terns & Skimmers",Onychoprion fuscatus
+Bridled Tern,Charadriiformes,"Laridae: Gulls, Terns & Skimmers",Onychoprion anaethetus
+Least Tern,Charadriiformes,"Laridae: Gulls, Terns & Skimmers",Sternula antillarum
+Gull-billed Tern,Charadriiformes,"Laridae: Gulls, Terns & Skimmers",Gelochelidon nilotica
+Caspian Tern,Charadriiformes,"Laridae: Gulls, Terns & Skimmers",Hydroprogne caspia
+Black Tern,Charadriiformes,"Laridae: Gulls, Terns & Skimmers",Chlidonias niger
+White-winged Tern,Charadriiformes,"Laridae: Gulls, Terns & Skimmers",Chlidonias leucopterus
+Roseate Tern,Charadriiformes,"Laridae: Gulls, Terns & Skimmers",Sterna dougallii
+Common Tern,Charadriiformes,"Laridae: Gulls, Terns & Skimmers",Sterna hirundo
+Arctic Tern,Charadriiformes,"Laridae: Gulls, Terns & Skimmers",Sterna paradisaea
+Forster's Tern,Charadriiformes,"Laridae: Gulls, Terns & Skimmers",Sterna forsteri
+Royal Tern,Charadriiformes,"Laridae: Gulls, Terns & Skimmers",Thalasseus maximus
+Sandwich Tern,Charadriiformes,"Laridae: Gulls, Terns & Skimmers",Thalasseus sandvicensis
+Elegant Tern,Charadriiformes,"Laridae: Gulls, Terns & Skimmers",Thalasseus elegans
+Black Skimmer,Charadriiformes,"Laridae: Gulls, Terns & Skimmers",Rynchops niger
+White-tailed Tropicbird,Phaethontiformes,Phaethontidae: Tropicbirds,Phaethon lepturus
+Red-billed Tropicbird,Phaethontiformes,Phaethontidae: Tropicbirds,Phaethon aethereus
+Red-throated Loon,Gaviiformes,Gaviidae: Loons,Gavia stellata
+Pacific Loon,Gaviiformes,Gaviidae: Loons,Gavia pacifica
+Common Loon,Gaviiformes,Gaviidae: Loons,Gavia immer
+Yellow-nosed Albatross,Procellariiformes,Diomedeidae: Albatrosses,Thalassarche chlororhynchos
+Black-browed Albatross,Procellariiformes,Diomedeidae: Albatrosses,Thalassarche melanophris
+Northern Fulmar,Procellariiformes,"Procellariidae: Petrels, Shearwaters & Fulmars",Fulmarus glacialis
+Trindade Petrel,Procellariiformes,"Procellariidae: Petrels, Shearwaters & Fulmars",Pterodroma arminjoniana
+Bermuda Petrel,Procellariiformes,"Procellariidae: Petrels, Shearwaters & Fulmars",Pterodroma cahow
+Black-capped Petrel,Procellariiformes,"Procellariidae: Petrels, Shearwaters & Fulmars",Pterodroma hasitata
+Fea's Petrel,Procellariiformes,"Procellariidae: Petrels, Shearwaters & Fulmars",Pterodroma feae
+Bulwer's Petrel,Procellariiformes,"Procellariidae: Petrels, Shearwaters & Fulmars",Bulweria bulwerii
+Cory's Shearwater,Procellariiformes,"Procellariidae: Petrels, Shearwaters & Fulmars",Calonectris diomedea
+Sooty Shearwater,Procellariiformes,"Procellariidae: Petrels, Shearwaters & Fulmars",Ardenna grisea
+Great Shearwater,Procellariiformes,"Procellariidae: Petrels, Shearwaters & Fulmars",Ardenna gravis
+Manx Shearwater,Procellariiformes,"Procellariidae: Petrels, Shearwaters & Fulmars",Puffinus puffinus
+Audubon's Shearwater,Procellariiformes,"Procellariidae: Petrels, Shearwaters & Fulmars",Puffinus lherminieri
+Wilson's Storm-Petrel,Procellariiformes,Oceanitidae: Southern Storm-Petrels,Oceanites oceanicus
+White-faced Storm-Petrel,Procellariiformes,Oceanitidae: Southern Storm-Petrels,Pelagodroma marina
+Leach's Storm-Petrel,Procellariiformes,Hydrobatidae: Northern Storm-Petrels,Hydrobates leucorhous
+Band-rumped Storm-Petrel,Procellariiformes,Hydrobatidae: Northern Storm-Petrels,Hydrobates castro
+Wood Stork,Ciconiiformes,Ciconiidae: Storks,Mycteria americana
+Magnificent Frigatebird,Suliformes,Fregatidae: Frigatebirds,Fregata magnificens
+Brown Booby,Suliformes,Sulidae: Boobies and Gannets,Sula leucogaster
+Northern Gannet,Suliformes,Sulidae: Boobies and Gannets,Morus bassanus
+Anhinga,Suliformes,Anhingidae: Anhingas,Anhinga anhinga
+Great Cormorant,Suliformes,Phalacrocoracidae: Cormorants,Phalacrocorax carbo
+Double-crested Cormorant,Suliformes,Phalacrocoracidae: Cormorants,Phalacrocorax auritus
+Neotropic Cormorant,Suliformes,Phalacrocoracidae: Cormorants,Phalacrocorax brasilianus
+American White Pelican,Pelecaniformes,Pelecanidae: Pelicans,Pelecanus erythrorhynchos
+Brown Pelican,Pelecaniformes,Pelecanidae: Pelicans,Pelecanus occidentalis
+American Bittern,Pelecaniformes,"Ardeidae: Bitterns, Herons & Egrets",Botaurus lentiginosus
+Least Bittern,Pelecaniformes,"Ardeidae: Bitterns, Herons & Egrets",Ixobrychus exilis
+Great Blue Heron,Pelecaniformes,"Ardeidae: Bitterns, Herons & Egrets",Ardea herodias
+Great Blue Heron (White form),Pelecaniformes,"Ardeidae: Bitterns, Herons & Egrets",Ardea herodias occidentalis
+Great Egret,Pelecaniformes,"Ardeidae: Bitterns, Herons & Egrets",Ardea alba
+Little Egret,Pelecaniformes,"Ardeidae: Bitterns, Herons & Egrets",Egretta garzetta
+Snowy Egret,Pelecaniformes,"Ardeidae: Bitterns, Herons & Egrets",Egretta thula
+Little Blue Heron,Pelecaniformes,"Ardeidae: Bitterns, Herons & Egrets",Egretta caerulea
+Tricolored Heron,Pelecaniformes,"Ardeidae: Bitterns, Herons & Egrets",Egretta tricolor
+Reddish Egret,Pelecaniformes,"Ardeidae: Bitterns, Herons & Egrets",Egretta rufescens
+Cattle Egret,Pelecaniformes,"Ardeidae: Bitterns, Herons & Egrets",Bubulcus ibis
+Green Heron,Pelecaniformes,"Ardeidae: Bitterns, Herons & Egrets",Butorides virescens
+Black-crowned Night-Heron,Pelecaniformes,"Ardeidae: Bitterns, Herons & Egrets",Nycticorax nycticorax
+Yellow-crowned Night-Heron,Pelecaniformes,"Ardeidae: Bitterns, Herons & Egrets",Nyctanassa violacea
+White Ibis,Pelecaniformes,Threskiornithidae: Ibises and Spoonbills,Eudocimus albus
+Glossy Ibis,Pelecaniformes,Threskiornithidae: Ibises and Spoonbills,Plegadis falcinellus
+White-faced Ibis,Pelecaniformes,Threskiornithidae: Ibises and Spoonbills,Plegadis chihi
+Roseate Spoonbill,Pelecaniformes,Threskiornithidae: Ibises and Spoonbills,Platalea ajaja
+Black Vulture,Cathartiformes,Cathartidae: New World Vultures,Coragyps atratus
+Turkey Vulture,Cathartiformes,Cathartidae: New World Vultures,Cathartes aura
+Osprey,Accipitriformes,Pandionidae: Osprey,Pandion haliaetus
+White-tailed Kite,Accipitriformes,"Accipitridae: Kites, Hawks & Eagles",Elanus leucurus
+Swallow-tailed Kite,Accipitriformes,"Accipitridae: Kites, Hawks & Eagles",Elanoides forficatus
+Golden Eagle,Accipitriformes,"Accipitridae: Kites, Hawks & Eagles",Aquila chrysaetos
+Northern Harrier,Accipitriformes,"Accipitridae: Kites, Hawks & Eagles",Circus hudsonicus
+Western Marsh Harrier,Accipitriformes,"Accipitridae: Kites, Hawks & Eagles",Circus aeruginosus
+Sharp-shinned Hawk,Accipitriformes,"Accipitridae: Kites, Hawks & Eagles",Accipiter striatus
+Cooper's Hawk,Accipitriformes,"Accipitridae: Kites, Hawks & Eagles",Accipiter cooperii
+Northern Goshawk,Accipitriformes,"Accipitridae: Kites, Hawks & Eagles",Accipiter gentilis
+Bald Eagle,Accipitriformes,"Accipitridae: Kites, Hawks & Eagles",Haliaeetus leucocephalus
+Mississippi Kite,Accipitriformes,"Accipitridae: Kites, Hawks & Eagles",Ictinia mississippiensis
+Red-shouldered Hawk,Accipitriformes,"Accipitridae: Kites, Hawks & Eagles",Buteo lineatus
+Broad-winged Hawk,Accipitriformes,"Accipitridae: Kites, Hawks & Eagles",Buteo platypterus
+Swainson's Hawk,Accipitriformes,"Accipitridae: Kites, Hawks & Eagles",Buteo swainsoni
+Zone-tailed Hawk,Accipitriformes,"Accipitridae: Kites, Hawks & Eagles",Buteo albonotatus
+Red-tailed Hawk,Accipitriformes,"Accipitridae: Kites, Hawks & Eagles",Buteo jamaicensis
+Red-tailed Hawk (Harlan's),Accipitriformes,"Accipitridae: Kites, Hawks & Eagles",Buteo jamaicensis harlani
+Rough-legged Hawk,Accipitriformes,"Accipitridae: Kites, Hawks & Eagles",Buteo lagopus
+Ferruginous Hawk,Accipitriformes,"Accipitridae: Kites, Hawks & Eagles",Buteo regalis
+Barn Owl,Strigiformes,Tytonidae: Barn Owls,Tyto alba
+Eastern Screech-Owl,Strigiformes,Strigidae: Typical Owls,Megascops asio
+Great Horned Owl,Strigiformes,Strigidae: Typical Owls,Bubo virginianus
+Snowy Owl,Strigiformes,Strigidae: Typical Owls,Bubo scandiacus
+Burrowing Owl,Strigiformes,Strigidae: Typical Owls,Athene cunicularia
+Barred Owl,Strigiformes,Strigidae: Typical Owls,Strix varia
+Long-eared Owl,Strigiformes,Strigidae: Typical Owls,Asio otus
+Short-eared Owl,Strigiformes,Strigidae: Typical Owls,Asio flammeus
+Northern Saw-whet Owl,Strigiformes,Strigidae: Typical Owls,Aegolius acadicus
+Belted Kingfisher,Coraciiformes,Alcedinidae: Kingfishers,Megaceryle alcyon
+Lewis's Woodpecker,Piciformes,Picidae: Woodpeckers,Melanerpes lewis
+Red-headed Woodpecker,Piciformes,Picidae: Woodpeckers,Melanerpes erythrocephalus
+Red-bellied Woodpecker,Piciformes,Picidae: Woodpeckers,Melanerpes carolinus
+Yellow-bellied Sapsucker,Piciformes,Picidae: Woodpeckers,Sphyrapicus varius
+Downy Woodpecker,Piciformes,Picidae: Woodpeckers,Dryobates pubescens
+Red-cockaded Woodpecker,Piciformes,Picidae: Woodpeckers,Dryobates borealis
+Hairy Woodpecker,Piciformes,Picidae: Woodpeckers,Dryobates villosus
+Northern Flicker,Piciformes,Picidae: Woodpeckers,Colaptes auratus
+Pileated Woodpecker,Piciformes,Picidae: Woodpeckers,Dryocopus pileatus
+Crested Caracara,Falconiformes,Falconidae: Falcons,Caracara cheriway
+American Kestrel,Falconiformes,Falconidae: Falcons,Falco sparverius
+Merlin (Prairie),Falconiformes,Falconidae: Falcons,Falco columbarius richardsonii
+Merlin,Falconiformes,Falconidae: Falcons,Falco columbarius
+Merlin (Taiga),Falconiformes,Falconidae: Falcons,Falco columbarius columbarius
+Gyrfalcon,Falconiformes,Falconidae: Falcons,Falco rusticolus
+Peregrine Falcon,Falconiformes,Falconidae: Falcons,Falco peregrinus
+Prairie Falcon,Falconiformes,Falconidae: Falcons,Falco mexicanus
+Monk Parakeet,Psittaciformes,Psittacidae: Parrots,Myiopsitta monachus
+Ash-throated Flycatcher,Passeriformes,Tyrannidae: Tyrant Flycatchers,Myiarchus cinerascens
+Great Crested Flycatcher,Passeriformes,Tyrannidae: Tyrant Flycatchers,Myiarchus crinitus
+Tropical/Couch's Kingbird,Passeriformes,Tyrannidae: Tyrant Flycatchers,Tyrannus melancholicus/couchii
+Western Kingbird,Passeriformes,Tyrannidae: Tyrant Flycatchers,Tyrannus verticalis
+Eastern Kingbird,Passeriformes,Tyrannidae: Tyrant Flycatchers,Tyrannus tyrannus
+Gray Kingbird,Passeriformes,Tyrannidae: Tyrant Flycatchers,Tyrannus dominicensis
+Scissor-tailed Flycatcher,Passeriformes,Tyrannidae: Tyrant Flycatchers,Tyrannus forficatus
+Fork-tailed Flycatcher,Passeriformes,Tyrannidae: Tyrant Flycatchers,Tyrannus savana
+Olive-sided Flycatcher,Passeriformes,Tyrannidae: Tyrant Flycatchers,Contopus cooperi
+Western Wood-Pewee,Passeriformes,Tyrannidae: Tyrant Flycatchers,Contopus sordidulus
+Eastern Wood-Pewee,Passeriformes,Tyrannidae: Tyrant Flycatchers,Contopus virens
+Yellow-bellied Flycatcher,Passeriformes,Tyrannidae: Tyrant Flycatchers,Empidonax flaviventris
+Acadian Flycatcher,Passeriformes,Tyrannidae: Tyrant Flycatchers,Empidonax virescens
+Alder Flycatcher,Passeriformes,Tyrannidae: Tyrant Flycatchers,Empidonax alnorum
+Willow Flycatcher,Passeriformes,Tyrannidae: Tyrant Flycatchers,Empidonax traillii
+Least Flycatcher,Passeriformes,Tyrannidae: Tyrant Flycatchers,Empidonax minimus
+Dusky Flycatcher,Passeriformes,Tyrannidae: Tyrant Flycatchers,Empidonax oberholseri
+Pacific-slope/Cordilleran Flycatcher,Passeriformes,Tyrannidae: Tyrant Flycatchers,Empidonax difficilis/occidentalis
+Eastern Phoebe,Passeriformes,Tyrannidae: Tyrant Flycatchers,Sayornis phoebe
+Say's Phoebe,Passeriformes,Tyrannidae: Tyrant Flycatchers,Sayornis saya
+Vermilion Flycatcher,Passeriformes,Tyrannidae: Tyrant Flycatchers,Pyrocephalus rubinus
+Loggerhead Shrike,Passeriformes,Laniidae: Shrikes,Lanius ludovicianus
+Northern Shrike,Passeriformes,Laniidae: Shrikes,Lanius borealis
+White-eyed Vireo,Passeriformes,Vireonidae: Vireos,Vireo griseus
+Bell's Vireo,Passeriformes,Vireonidae: Vireos,Vireo bellii
+Yellow-throated Vireo,Passeriformes,Vireonidae: Vireos,Vireo flavifrons
+Blue-headed Vireo,Passeriformes,Vireonidae: Vireos,Vireo solitarius
+Philadelphia Vireo,Passeriformes,Vireonidae: Vireos,Vireo philadelphicus
+Warbling Vireo,Passeriformes,Vireonidae: Vireos,Vireo gilvus
+Red-eyed Vireo,Passeriformes,Vireonidae: Vireos,Vireo olivaceus
+Black-whiskered Vireo,Passeriformes,Vireonidae: Vireos,Vireo altiloquus
+Blue Jay,Passeriformes,"Corvidae: Jays, Crows & Magpies",Cyanocitta cristata
+Black-billed Magpie,Passeriformes,"Corvidae: Jays, Crows & Magpies",Pica hudsonia
+American Crow,Passeriformes,"Corvidae: Jays, Crows & Magpies",Corvus brachyrhynchos
+Fish Crow,Passeriformes,"Corvidae: Jays, Crows & Magpies",Corvus ossifragus
+Common Raven,Passeriformes,"Corvidae: Jays, Crows & Magpies",Corvus corax
+Horned Lark,Passeriformes,Alaudidae: Larks,Eremophila alpestris
+Bank Swallow,Passeriformes,Hirundinidae: Martins and Swallows,Riparia riparia
+Tree Swallow,Passeriformes,Hirundinidae: Martins and Swallows,Tachycineta bicolor
+Violet-green Swallow,Passeriformes,Hirundinidae: Martins and Swallows,Tachycineta thalassina
+Northern Rough-winged Swallow,Passeriformes,Hirundinidae: Martins and Swallows,Stelgidopteryx serripennis
+Brown-chested Martin,Passeriformes,Hirundinidae: Martins and Swallows,Progne tapera
+Purple Martin,Passeriformes,Hirundinidae: Martins and Swallows,Progne subis
+Barn Swallow,Passeriformes,Hirundinidae: Martins and Swallows,Hirundo rustica
+Cliff Swallow,Passeriformes,Hirundinidae: Martins and Swallows,Petrochelidon pyrrhonota
+Cave Swallow,Passeriformes,Hirundinidae: Martins and Swallows,Petrochelidon fulva
+Carolina Chickadee,Passeriformes,Paridae: Chickadees and Titmice,Poecile carolinensis
+Black-capped Chickadee,Passeriformes,Paridae: Chickadees and Titmice,Poecile atricapillus
+Boreal Chickadee,Passeriformes,Paridae: Chickadees and Titmice,Poecile hudsonicus
+Tufted Titmouse,Passeriformes,Paridae: Chickadees and Titmice,Baeolophus bicolor
+Red-breasted Nuthatch,Passeriformes,Sittidae: Nuthatches,Sitta canadensis
+White-breasted Nuthatch,Passeriformes,Sittidae: Nuthatches,Sitta carolinensis
+Brown-headed Nuthatch,Passeriformes,Sittidae: Nuthatches,Sitta pusilla
+Brown Creeper,Passeriformes,Certhiidae: Creepers,Certhia americana
+Rock Wren,Passeriformes,Troglodytidae: Wrens,Salpinctes obsoletus
+House Wren,Passeriformes,Troglodytidae: Wrens,Troglodytes aedon
+Winter Wren,Passeriformes,Troglodytidae: Wrens,Troglodytes hiemalis
+Sedge Wren,Passeriformes,Troglodytidae: Wrens,Cistothorus platensis
+Marsh Wren,Passeriformes,Troglodytidae: Wrens,Cistothorus palustris
+Carolina Wren,Passeriformes,Troglodytidae: Wrens,Thryothorus ludovicianus
+Bewick's Wren,Passeriformes,Troglodytidae: Wrens,Thryomanes bewickii
+Blue-gray Gnatcatcher,Passeriformes,Sylviidae: Gnatcatchers,Polioptila caerulea
+Golden-crowned Kinglet,Passeriformes,Regulidae: Kinglets,Regulus satrapa
+Ruby-crowned Kinglet,Passeriformes,Regulidae: Kinglets,Regulus calendula
+Northern Wheatear,Passeriformes,Muscicapidae: Old World Flycatchers,Oenanthe oenanthe
+Eastern Bluebird,Passeriformes,Turdidae: Thrushes,Sialia sialis
+Mountain Bluebird,Passeriformes,Turdidae: Thrushes,Sialia currucoides
+Townsend's Solitaire,Passeriformes,Turdidae: Thrushes,Myadestes townsendi
+Veery,Passeriformes,Turdidae: Thrushes,Catharus fuscescens
+Gray-cheeked Thrush,Passeriformes,Turdidae: Thrushes,Catharus minimus
+Bicknell's Thrush,Passeriformes,Turdidae: Thrushes,Catharus bicknelli
+Swainson's Thrush,Passeriformes,Turdidae: Thrushes,Catharus ustulatus
+Hermit Thrush,Passeriformes,Turdidae: Thrushes,Catharus guttatus
+Wood Thrush,Passeriformes,Turdidae: Thrushes,Hylocichla mustelina
+American Robin,Passeriformes,Turdidae: Thrushes,Turdus migratorius
+Varied Thrush,Passeriformes,Turdidae: Thrushes,Ixoreus naevius
+Gray Catbird,Passeriformes,"Mimidae: Catbirds, Mockingbirds & Thrashers",Dumetella carolinensis
+Brown Thrasher,Passeriformes,"Mimidae: Catbirds, Mockingbirds & Thrashers",Toxostoma rufum
+Sage Thrasher,Passeriformes,"Mimidae: Catbirds, Mockingbirds & Thrashers",Oreoscoptes montanus
+Northern Mockingbird,Passeriformes,"Mimidae: Catbirds, Mockingbirds & Thrashers",Mimus polyglottos
+European Starling,Passeriformes,Sturnidae: Starlings,Sturnus vulgaris
+Bohemian Waxwing,Passeriformes,Bombycillidae: Waxwings,Bombycilla garrulus
+Cedar Waxwing,Passeriformes,Bombycillidae: Waxwings,Bombycilla cedrorum
+House Sparrow,Passeriformes,Passeridae: Old World Sparrows,Passer domesticus
+American Pipit,Passeriformes,Motacillidae: Pipits,Anthus rubescens
+Sprague's Pipit,Passeriformes,Motacillidae: Pipits,Anthus spragueii
+Evening Grosbeak,Passeriformes,"Fringillidae: Siskins, Crossbills & Allies",Coccothraustes vespertinus
+Pine Grosbeak,Passeriformes,"Fringillidae: Siskins, Crossbills & Allies",Pinicola enucleator
+House Finch,Passeriformes,"Fringillidae: Siskins, Crossbills & Allies",Haemorhous mexicanus
+Purple Finch,Passeriformes,"Fringillidae: Siskins, Crossbills & Allies",Haemorhous purpureus
+Common Redpoll,Passeriformes,"Fringillidae: Siskins, Crossbills & Allies",Acanthis flammea
+Hoary Redpoll,Passeriformes,"Fringillidae: Siskins, Crossbills & Allies",Acanthis hornemanni
+Red Crossbill,Passeriformes,"Fringillidae: Siskins, Crossbills & Allies",Loxia curvirostra
+White-winged Crossbill,Passeriformes,"Fringillidae: Siskins, Crossbills & Allies",Loxia leucoptera
+Pine Siskin,Passeriformes,"Fringillidae: Siskins, Crossbills & Allies",Spinus pinus
+Lesser Goldfinch,Passeriformes,"Fringillidae: Siskins, Crossbills & Allies",Spinus psaltria
+American Goldfinch,Passeriformes,"Fringillidae: Siskins, Crossbills & Allies",Spinus tristis
+Lapland Longspur,Passeriformes,Calcariidae: Longspurs and Snow Buntings,Calcarius lapponicus
+Chestnut-collared Longspur,Passeriformes,Calcariidae: Longspurs and Snow Buntings,Calcarius ornatus
+Smith's Longspur,Passeriformes,Calcariidae: Longspurs and Snow Buntings,Calcarius pictus
+Snow Bunting,Passeriformes,Calcariidae: Longspurs and Snow Buntings,Plectrophenax nivalis
+Bachman's Sparrow,Passeriformes,Passerellidae: New World Sparrows and Towhees,Peucaea aestivalis
+Grasshopper Sparrow,Passeriformes,Passerellidae: New World Sparrows and Towhees,Ammodramus savannarum
+Black-throated Sparrow,Passeriformes,Passerellidae: New World Sparrows and Towhees,Amphispiza bilineata
+Lark Sparrow,Passeriformes,Passerellidae: New World Sparrows and Towhees,Chondestes grammacus
+Lark Bunting,Passeriformes,Passerellidae: New World Sparrows and Towhees,Calamospiza melanocorys
+Chipping Sparrow,Passeriformes,Passerellidae: New World Sparrows and Towhees,Spizella passerina
+Clay-colored Sparrow,Passeriformes,Passerellidae: New World Sparrows and Towhees,Spizella pallida
+Field Sparrow,Passeriformes,Passerellidae: New World Sparrows and Towhees,Spizella pusilla
+Brewer's Sparrow,Passeriformes,Passerellidae: New World Sparrows and Towhees,Spizella breweri
+Fox Sparrow,Passeriformes,Passerellidae: New World Sparrows and Towhees,Passerella iliaca
+Fox Sparrow (Red),Passeriformes,Passerellidae: New World Sparrows and Towhees,Passerella iliaca iliaca
+American Tree Sparrow,Passeriformes,Passerellidae: New World Sparrows and Towhees,Spizelloides arborea
+Dark-eyed Junco,Passeriformes,Passerellidae: New World Sparrows and Towhees,Junco hyemalis
+Dark-eyed Junco (Oregon),Passeriformes,Passerellidae: New World Sparrows and Towhees,Junco hyemalis montanus
+Dark-eyed Junco (Pink-sided),Passeriformes,Passerellidae: New World Sparrows and Towhees,Junco hyemalis mearnsi
+White-crowned Sparrow (Gambel's),Passeriformes,Passerellidae: New World Sparrows and Towhees,Zonotrichia leucophrys gambelii
+White-crowned Sparrow,Passeriformes,Passerellidae: New World Sparrows and Towhees,Zonotrichia leucophrys
+Harris's Sparrow,Passeriformes,Passerellidae: New World Sparrows and Towhees,Zonotrichia querula
+White-throated Sparrow,Passeriformes,Passerellidae: New World Sparrows and Towhees,Zonotrichia albicollis
+Vesper Sparrow,Passeriformes,Passerellidae: New World Sparrows and Towhees,Pooecetes gramineus
+LeConte's Sparrow,Passeriformes,Passerellidae: New World Sparrows and Towhees,Ammospiza leconteii
+Seaside Sparrow,Passeriformes,Passerellidae: New World Sparrows and Towhees,Ammospiza maritimus
+Nelson's Sparrow,Passeriformes,Passerellidae: New World Sparrows and Towhees,Ammospiza nelsoni
+Nelson's Sparrow (Nelson's),Passeriformes,Passerellidae: New World Sparrows and Towhees,Ammospiza nelsoni nelsoni
+Nelson's Sparrow (James Bay),Passeriformes,Passerellidae: New World Sparrows and Towhees,Ammospiza nelsoni alter
+Nelson's Sparrow (Atlantic Coast),Passeriformes,Passerellidae: New World Sparrows and Towhees,Ammospiza nelsoni subvirgatus
+Saltmarsh Sparrow,Passeriformes,Passerellidae: New World Sparrows and Towhees,Ammospiza caudacutus
+Henslow's Sparrow,Passeriformes,Passerellidae: New World Sparrows and Towhees,Centronyx henslowii
+Savannah Sparrow,Passeriformes,Passerellidae: New World Sparrows and Towhees,Passerculus sandwichensis
+Savannah Sparrow (Ipswich),Passeriformes,Passerellidae: New World Sparrows and Towhees,Passerculus sandwichensis princeps
+Song Sparrow,Passeriformes,Passerellidae: New World Sparrows and Towhees,Melospiza melodia
+Lincoln's Sparrow,Passeriformes,Passerellidae: New World Sparrows and Towhees,Melospiza lincolnii
+Swamp Sparrow,Passeriformes,Passerellidae: New World Sparrows and Towhees,Melospiza georgiana
+Green-tailed Towhee,Passeriformes,Passerellidae: New World Sparrows and Towhees,Pipilo chlorurus
+Spotted Towhee,Passeriformes,Passerellidae: New World Sparrows and Towhees,Pipilo maculatus
+Eastern Towhee,Passeriformes,Passerellidae: New World Sparrows and Towhees,Pipilo erythrophthalmus
+Yellow-breasted Chat,Passeriformes,Icteriidae: Yellow-breasted Chat,Icteria virens
+Yellow-headed Blackbird,Passeriformes,"Icteridae: Blackbirds, Meadowlarks & Orioles",Xanthocephalus xanthocephalus
+Bobolink,Passeriformes,"Icteridae: Blackbirds, Meadowlarks & Orioles",Dolichonyx oryzivorus
+Eastern Meadowlark,Passeriformes,"Icteridae: Blackbirds, Meadowlarks & Orioles",Sturnella magna
+Orchard Oriole,Passeriformes,"Icteridae: Blackbirds, Meadowlarks & Orioles",Icterus spurius
+Bullock's Oriole,Passeriformes,"Icteridae: Blackbirds, Meadowlarks & Orioles",Icterus bullockii
+Baltimore Oriole,Passeriformes,"Icteridae: Blackbirds, Meadowlarks & Orioles",Icterus galbula
+Scott's Oriole,Passeriformes,"Icteridae: Blackbirds, Meadowlarks & Orioles",Icterus parisorum
+Red-winged Blackbird,Passeriformes,"Icteridae: Blackbirds, Meadowlarks & Orioles",Agelaius phoeniceus
+Shiny Cowbird,Passeriformes,"Icteridae: Blackbirds, Meadowlarks & Orioles",Molothrus bonariensis
+Brown-headed Cowbird,Passeriformes,"Icteridae: Blackbirds, Meadowlarks & Orioles",Molothrus ater
+Rusty Blackbird,Passeriformes,"Icteridae: Blackbirds, Meadowlarks & Orioles",Euphagus carolinus
+Brewer's Blackbird,Passeriformes,"Icteridae: Blackbirds, Meadowlarks & Orioles",Euphagus cyanocephalus
+Common Grackle,Passeriformes,"Icteridae: Blackbirds, Meadowlarks & Orioles",Quiscalus quiscula
+Boat-tailed Grackle,Passeriformes,"Icteridae: Blackbirds, Meadowlarks & Orioles",Quiscalus major
+Ovenbird,Passeriformes,Parulidae: Wood Warblers,Seiurus aurocapilla
+Worm-eating Warbler,Passeriformes,Parulidae: Wood Warblers,Helmitheros vermivorum
+Louisiana Waterthrush,Passeriformes,Parulidae: Wood Warblers,Parkesia motacilla
+Northern Waterthrush,Passeriformes,Parulidae: Wood Warblers,Parkesia noveboracensis
+Golden-winged Warbler,Passeriformes,Parulidae: Wood Warblers,Vermivora chrysoptera
+Blue-winged Warbler,Passeriformes,Parulidae: Wood Warblers,Vermivora cyanoptera
+Black-and-white Warbler,Passeriformes,Parulidae: Wood Warblers,Mniotilta varia
+Prothonotary Warbler,Passeriformes,Parulidae: Wood Warblers,Protonotaria citrea
+Swainson's Warbler,Passeriformes,Parulidae: Wood Warblers,Limnothlypis swainsonii
+Tennessee Warbler,Passeriformes,Parulidae: Wood Warblers,Leiothlypis peregrina
+Orange-crowned Warbler,Passeriformes,Parulidae: Wood Warblers,Leiothlypis celata
+Lucy's Warbler,Passeriformes,Parulidae: Wood Warblers,Leiothlypis luciae
+Nashville Warbler,Passeriformes,Parulidae: Wood Warblers,Leiothlypis ruficapilla
+Connecticut Warbler,Passeriformes,Parulidae: Wood Warblers,Oporornis agilis
+MacGillivray's Warbler,Passeriformes,Parulidae: Wood Warblers,Geothlypis tolmiei
+Mourning Warbler,Passeriformes,Parulidae: Wood Warblers,Geothlypis philadelphia
+Kentucky Warbler,Passeriformes,Parulidae: Wood Warblers,Geothlypis formosa
+Common Yellowthroat,Passeriformes,Parulidae: Wood Warblers,Geothlypis trichas
+Hooded Warbler,Passeriformes,Parulidae: Wood Warblers,Setophaga citrina
+American Redstart,Passeriformes,Parulidae: Wood Warblers,Setophaga ruticilla
+Kirtland's Warbler,Passeriformes,Parulidae: Wood Warblers,Setophaga kirtlandii
+Cape May Warbler,Passeriformes,Parulidae: Wood Warblers,Setophaga tigrina
+Cerulean Warbler,Passeriformes,Parulidae: Wood Warblers,Setophaga cerulea
+Northern Parula,Passeriformes,Parulidae: Wood Warblers,Setophaga americana
+Magnolia Warbler,Passeriformes,Parulidae: Wood Warblers,Setophaga magnolia
+Bay-breasted Warbler,Passeriformes,Parulidae: Wood Warblers,Setophaga castanea
+Blackburnian Warbler,Passeriformes,Parulidae: Wood Warblers,Setophaga fusca
+Yellow Warbler,Passeriformes,Parulidae: Wood Warblers,Setophaga petechia
+Chestnut-sided Warbler,Passeriformes,Parulidae: Wood Warblers,Setophaga pensylvanica
+Blackpoll Warbler,Passeriformes,Parulidae: Wood Warblers,Setophaga striata
+Black-throated Blue Warbler,Passeriformes,Parulidae: Wood Warblers,Setophaga caerulescens
+Palm Warbler,Passeriformes,Parulidae: Wood Warblers,Setophaga palmarum
+Palm Warbler (Western),Passeriformes,Parulidae: Wood Warblers,Setophaga palmarum palmarum
+Palm Warbler (Yellow),Passeriformes,Parulidae: Wood Warblers,Setophaga palmarum hypochrysea
+Pine Warbler,Passeriformes,Parulidae: Wood Warblers,Setophaga pinus
+Yellow-rumped Warbler,Passeriformes,Parulidae: Wood Warblers,Setophaga coronata
+Yellow-rumped Warbler (Audubon's),Passeriformes,Parulidae: Wood Warblers,Setophaga coronata auduboni
+Yellow-rumped Warbler (Myrtle),Passeriformes,Parulidae: Wood Warblers,Setophaga coronata coronata
+Yellow-throated Warbler,Passeriformes,Parulidae: Wood Warblers,Setophaga dominica
+Prairie Warbler,Passeriformes,Parulidae: Wood Warblers,Setophaga discolor
+Black-throated Gray Warbler,Passeriformes,Parulidae: Wood Warblers,Setophaga nigrescens
+Townsend's Warbler,Passeriformes,Parulidae: Wood Warblers,Setophaga townsendi
+Black-throated Green Warbler,Passeriformes,Parulidae: Wood Warblers,Setophaga virens
+Canada Warbler,Passeriformes,Parulidae: Wood Warblers,Cardellina canadensis
+Wilson's Warbler,Passeriformes,Parulidae: Wood Warblers,Cardellina pusilla
+Summer Tanager,Passeriformes,"Cardinalidae: Tanagers, Cardinals, Grosbeaks & Dickcissels",Piranga rubra
+Scarlet Tanager,Passeriformes,"Cardinalidae: Tanagers, Cardinals, Grosbeaks & Dickcissels",Piranga olivacea
+Western Tanager,Passeriformes,"Cardinalidae: Tanagers, Cardinals, Grosbeaks & Dickcissels",Piranga ludoviciana
+Northern Cardinal,Passeriformes,"Cardinalidae: Tanagers, Cardinals, Grosbeaks & Dickcissels",Cardinalis cardinalis
+Rose-breasted Grosbeak,Passeriformes,"Cardinalidae: Tanagers, Cardinals, Grosbeaks & Dickcissels",Pheucticus ludovicianus
+Black-headed Grosbeak,Passeriformes,"Cardinalidae: Tanagers, Cardinals, Grosbeaks & Dickcissels",Pheucticus melanocephalus
+Blue Grosbeak,Passeriformes,"Cardinalidae: Tanagers, Cardinals, Grosbeaks & Dickcissels",Passerina caerulea
+Lazuli Bunting,Passeriformes,"Cardinalidae: Tanagers, Cardinals, Grosbeaks & Dickcissels",Passerina amoena
+Indigo Bunting,Passeriformes,"Cardinalidae: Tanagers, Cardinals, Grosbeaks & Dickcissels",Passerina cyanea
+Painted Bunting,Passeriformes,"Cardinalidae: Tanagers, Cardinals, Grosbeaks & Dickcissels",Passerina ciris
+Dickcissel,Passeriformes,"Cardinalidae: Tanagers, Cardinals, Grosbeaks & Dickcissels",Spiza americana
+Tufted Puffin,,,Frater­cu­la cirrhata
+Passenger Pigeon,-,Species Believed to Have Occurred Historically,Ectopistes migratorius
+Eskimo Curlew,-,Species Believed to Have Occurred Historically,Numenius borealis
+Carolina Parakeet,-,Species Believed to Have Occurred Historically,Conuropsis carolinensis
+Bachman's Warbler,-,Species Believed to Have Occurred Historically,Vermivora bachmanii
+Peruvian Pelican,Pelecaniformes,Pelecanidae: Pelicans,Pelecanus thagus
+Willow Ptarmigan,,,Lago­pus lagopus
+Horned Puffin,,,Frater­cu­la corniculata
+Greater Roadrunner,,,Geococcyx californianus
+California Quail,,,Callipepla californica
