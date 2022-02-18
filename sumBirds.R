@@ -1,40 +1,54 @@
+# Load libraries
 library(lubridate)
 library(tidyverse)
 library(janitor)
 library(tibble)
 
 # TODO
-# factor levels for liturgical seasons to appear in order as specified in `seasonOrder`
 # consider if any additional criteria for typical birds is missing
 # autojoin liturgical season date boundaries (see @kevin below)
 
+# Parameters
+nRecent = 11 # Include observations from nRecent last years
+distance_from = 5 # Maximum distance of observation from point of interest
+
+# File name to read
 birdFile = "corhaven"
-nRecent = 11
 
-#setwd("~/Desktop/personal/coracle/")
-birds = read.csv(paste0(birdFile,".csv"),stringsAsFactors = F)
+# File containing all observations from eBird
+birds = read_csv(paste0(birdFile,".csv"))
 
-# read lookup files
-seenAtLocation = read.csv(paste0(birdFile,"Obs.csv"),stringsAsFactors = F)
-birdFamily = read.csv("birdFamily.csv",stringsAsFactors = F)
-liturgicalSeasonLookup = read.csv("liturgicalDateBoundaries.csv",stringsAsFactors = F)
+# File containing our own observations that aren't included in eBird
+# Pull only species codes
+seenAtLocation = read_csv(paste0(birdFile,"Obs.csv")) %>%
+  pull(speciesCode)
 
-seasonOrder = c("Advent",
-                "Christmas",
-                "Epiphany",
-                "Lent",
-                "Easter",
-                "Ordinary Time")
+# File containing bird families for species
+birdFamily = read_csv("birdFamily.csv") %>%
+  select(comName, birdFamily)
 
+# File containing liturgical seasons
+# Clean date to get range
+liturgicalSeasonLookup = read_csv("liturgicalDateBoundaries.csv") %>%
+  mutate(season_start = lubridate::mdy(date),
+         liturgicalSeason_collapsed = factor(liturgicalSeason_collapsed, levels = seasonOrder)) %>%
+  group_by(year, liturgicalSeason_collapsed) %>%
+  summarise(season_start = min(season_start)) %>%
+  ungroup() %>%
+  arrange(season_start) %>%
+  mutate(season_end = lead(season_start) - 1) %>%
+  mutate(liturgicalSeason_collapsed = as.character(liturgicalSeason_collapsed))
+
+# Last season (Christmas 2021) ends before Epiphany on Jan 6, 2022
+liturgicalSeasonLookup$season_end[nrow(liturgicalSeasonLookup)] = ymd("2022-01-06") - 1
+
+# Make start and end of season into interval
 liturgicalSeasonLookup = liturgicalSeasonLookup %>%
-  mutate(date = lubridate::mdy(date))
+  mutate(season = interval(season_start, season_end))
 
-seenAtLocation = seenAtLocation %>%
-  select(speciesCode) %>% unlist()
-
-# filter the hyperlocal birds and make pretty dates
-birds_df = as_tibble(birds1) %>%
-  dplyr::filter(within5km == 1,
+# Filter the hyperlocal birds and make pretty dates
+birds_df = birds %>%
+  dplyr::filter(dist_km <= distance_from,
                 !is.na(howMany)) %>%
   mutate(obsDt = lubridate::ymd(as.Date(obsDt)),
          obsMonth = month(obsDt),
@@ -46,15 +60,37 @@ birds_df = birds_df %>%
   left_join(birdFamily, by = "comName")
 
 # join in the liturgical seasons by closest inclusive date from liturgicalSeasonLookup applied to obsDt
+birds_df$liturgicalSeason_collapsed = NA
+
+for (i in 1:nrow(birds_df)) {
+  date = birds_df$obsDt[i]
+  which_season = liturgicalSeasonLookup %>%
+    mutate(this_season = date %within% liturgicalSeasonLookup$season) %>%
+    filter(this_season == TRUE) %>%
+    pull(liturgicalSeason_collapsed)
+  birds_df$liturgicalSeason_collapsed[i] = which_season
+  print(i)
+}
+
+# Order of seasons
+seasonOrder = c("Advent",
+                "Christmas",
+                "Epiphany",
+                "Lent",
+                "Easter",
+                "Ordinary Time")
+
+# Change seasons to a factor so it's ordered
 birds_df = birds_df %>%
-  left_join( # TODO @kevin
-    )
+  mutate(liturgicalSeason_collapsed = factor(liturgicalSeason_collapsed, levels = seasonOrder))
 
-# get all years in the supplied df
-years = unlist(sort(unique(birds_df$obsYear)))
+# Get all years in the supplied df
+years = birds_df %>%
+  pull(obsYear) %>%
+  unique()
 
-# take the most recent N years that appear in the df
-recentYears = tail(years,nRecent)
+# Take the most recent N years that appear in the df
+recentYears = tail(years, nRecent)
 
 # find the unique birds in a given year of data, then pull into wide format
 unique_birds_year = birds_df %>%
@@ -93,7 +129,46 @@ typical_birds_year = unique_birds_year %>%
 
 # make a list of the typical birds for later lookup
 typical_birds_name = typical_birds_year %>%
-  select(comName) %>% unlist()
+  pull(comName)
+
+# find unique birds per month to calculate most common liturgical season
+# unique_birds_month = birds_df %>%
+#   filter(comName %in% typical_birds_name) %>%
+#   #mutate(month = as.numeric(as.character(month))) %>%
+#   group_by(birdFamily,
+#            comName,
+#            speciesCode,
+#            # obsMonth,
+#            liturgicalSeason_collapsed) %>%
+#   dplyr::summarize(totalBirds = sum(howMany)) %>%
+#   group_by(comName,
+#            speciesCode) %>%
+#   mutate(grandTotal = sum(totalBirds)) %>%
+#   group_by(comName,
+#            speciesCode,
+#            liturgicalSeason_collapsed) %>%
+#   mutate(total_season = sum(totalBirds)) %>%
+#   pivot_wider(names_from = liturgicalSeason_collapsed,
+#               values_from = totalBirds,
+#               values_fill = 0) %>%
+#   mutate(percent = round(total_season/grandTotal,2),
+#          typicalSeason = case_when(percent>.75~liturgicalSeason_collapsed,
+#                                    percent>.7~liturgicalSeason_collapsed,
+#                                    percent>.65~liturgicalSeason_collapsed,
+#                                    percent>.6~liturgicalSeason_collapsed,
+#                                    percent>.55~liturgicalSeason_collapsed,
+#                                    percent>.5~liturgicalSeason_collapsed,
+#                                    percent>.45~liturgicalSeason_collapsed,
+#                                    percent>.4~liturgicalSeason_collapsed,
+#                                    percent>.35~liturgicalSeason_collapsed,
+#                                    percent>.3~liturgicalSeason_collapsed,
+#                                    percent>=.25~liturgicalSeason_collapsed,
+#                                    TRUE~"none")) %>%
+#   dplyr::select("comName",
+#                 "speciesCode",
+#                 "typicalSeason",
+#                 sort(colnames(.))) %>%
+#   ungroup()
 
 # find unique birds per month to calculate most common liturgical season
 unique_birds_month = birds_df %>%
@@ -102,77 +177,57 @@ unique_birds_month = birds_df %>%
   group_by(birdFamily,
            comName,
            speciesCode,
-           obsMonth,
            liturgicalSeason_collapsed) %>%
   dplyr::summarize(totalBirds = sum(howMany)) %>%
-  group_by(comName,
-           speciesCode) %>%
-  mutate(grandTotal = sum(totalBirds)) %>%
-  group_by(comName,
-           speciesCode,
-           liturgicalSeason_collapsed) %>%
-  mutate(total_season = sum(totalBirds)) %>%
-  pivot_wider(names_from = obsMonth,
-              values_from = totalBirds,
-              values_fill = 0) %>%
-  mutate(percent = round(total_season/grandTotal,2),
-         typicalSeason = case_when(percent>.75~liturgicalSeason_collapsed,
-                                   percent>.7~liturgicalSeason_collapsed,
-                                   percent>.65~liturgicalSeason_collapsed,
-                                   percent>.6~liturgicalSeason_collapsed,
-                                   percent>.55~liturgicalSeason_collapsed,
-                                   percent>.5~liturgicalSeason_collapsed,
-                                   percent>.45~liturgicalSeason_collapsed,
-                                   percent>.4~liturgicalSeason_collapsed,
-                                   percent>.35~liturgicalSeason_collapsed,
-                                   percent>.3~liturgicalSeason_collapsed,
-                                   percent>=.25~liturgicalSeason_collapsed,
-                                   TRUE~"none")) %>%
-  dplyr::select("comName",
-                "speciesCode",
-                "typicalSeason",
-                sort(colnames(.))) %>%
-  ungroup()
-
-
-# check that all birds have at least one typical season set
-ifelse(n_distinct(unique_birds_month$comName) != n_distinct(unique_birds_month$comName[unique_birds_month$typicalSeason!="none"]),
-                                                            "ERROR: not all birds have a season",
-                                                            "OK: all birds have a season")
-
-
-unique_birds_season = unique_birds_month %>%
-  select(birdFamily,
-         comName,
-         speciesCode,
-         typicalSeason,
-         percent) %>%
-  filter(typicalSeason != "none")
-
-# check that all directly observed birds are in the dataset
-table(seenAtLocation %in% unique_birds_season$speciesCode)
-
-# move long to wide to pull seasons
-unique_birds_season = unique_birds_season %>%
-  group_by(birdFamily,
-           comName,
-           speciesCode) %>%
-  pivot_wider(names_from = typicalSeason,
-              values_from = percent) %>%
+  mutate(grandTotal = sum(totalBirds),
+         pct = totalBirds / grandTotal,
+         pct_round = round(pct/.1)*.1, # Round percentage to nearest 10%
+         is_typical = (pct_round == max(pct_round))) %>% # is_typical if the rounded pct is the max for group
+  filter(is_typical) %>%
+  select(comName, speciesCode, liturgicalSeason_collapsed) |> 
   ungroup() %>%
-  select(birdFamily,
-         comName,
-         speciesCode,
-         Advent,
-         Christmas,
-         Epiphany,
-         Lent,
-         Easter,
-         `Ordinary Time`
-         )
+  group_by(birdFamily, comName, speciesCode) %>%
+  # For birds with multiple typical seasons, combine those seasons into a single string, then drop duplicated rows
+  mutate(liturgicalSeason_collapsed = paste0(liturgicalSeason_collapsed, collapse = ", ")) %>%
+  distinct()
 
-write.csv(unique_birds_season,paste0(birdFile,"_unique_birds_season_",Sys.Date(),".csv"),row.names = F)
+# Write unique birds and their seasons
+write_csv(unique_birds_month, file = "unique_birds_season.csv")
 
-
-
-
+# # check that all birds have at least one typical season set
+# ifelse(n_distinct(unique_birds_month$comName) != n_distinct(unique_birds_month$comName[unique_birds_month$typicalSeason!="none"]),
+#                                                             "ERROR: not all birds have a season",
+#                                                             "OK: all birds have a season")
+# 
+# 
+# unique_birds_season = unique_birds_month %>%
+#   select(birdFamily,
+#          comName,
+#          speciesCode,
+#          typicalSeason,
+#          percent) %>%
+#   filter(typicalSeason != "none")
+# 
+# # check that all directly observed birds are in the dataset
+# table(seenAtLocation %in% unique_birds_season$speciesCode)
+# 
+# # move long to wide to pull seasons
+# unique_birds_season = unique_birds_season %>%
+#   group_by(birdFamily,
+#            comName,
+#            speciesCode) %>%
+#   pivot_wider(names_from = typicalSeason,
+#               values_from = percent) %>%
+#   ungroup() %>%
+#   select(birdFamily,
+#          comName,
+#          speciesCode,
+#          Advent,
+#          Christmas,
+#          Epiphany,
+#          Lent,
+#          Easter,
+#          `Ordinary Time`
+#          )
+# 
+# write.csv(unique_birds_season,paste0(birdFile,"_unique_birds_season_",Sys.Date(),".csv"),row.names = F)
