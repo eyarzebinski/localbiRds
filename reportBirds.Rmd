@@ -3,8 +3,10 @@ title: "reportBirds"
 author: "Evelyn Yarzebinski"
 date: "2/9/2022"
 output:
+  word_document: default
   html_document:
     df_print: paged
+  pdf_document: default
 params:
   test1: test
 ---
@@ -23,7 +25,7 @@ params:
 
 ```{r setup, include=FALSE}
 require(knitr)
-df = read.csv("corhaven_unique_birds_season_2022-02-08.csv",stringsAsFactors = F)
+df = read.csv("unique_birds_season.csv",stringsAsFactors = F)
 ```
 
 ```{r, echo = F}

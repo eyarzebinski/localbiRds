@@ -45,9 +45,9 @@ species_template <- "### %s
 %s
 
 `r run_columnbreak()`
-*Typical seasons: %s*
+*Typically seen: %s*
 
-![alt text here](%s){width=25%%}
+![](%s){width=25%%}
 <!---BLOCK_MULTICOL_STOP--->
 "
 
@@ -70,7 +70,8 @@ for (i in fam) {
     
     # For all species within family, print an entry
     for (j in 1:nrow(fam_species)) {
-        cat(sprintf(species_template, 
+        cat(sprintf(species_template,  # Specify which template to use
+                    # For each %s set in a given template, define it in order below
                     fam_species$comName[j], 
                     fam_species$description[j],
                     fam_species$typicalSeason[j],
