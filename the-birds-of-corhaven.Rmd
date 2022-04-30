@@ -23,11 +23,7 @@ df <- read_csv("tmp/corhaven_unique_birds_season_2022-02-08.csv") |>
   summarize(typicalSeason = str_c(typicalSeason, collapse = ", "))
 ebird <- read_csv("ebird_data.csv") |> 
   mutate(photo_path = glue("photos/{speciesCode}.png"))
-
-# Get bird families
-fam <- ebird |> 
-  pull(birdFamily) |> 
-  unique()
+fam <- read_csv("bird-family-reflections.csv")
 
 # Join dataframes
 df <- df |> 
@@ -36,9 +32,9 @@ df <- df |>
 
 ## Preface {.page-break-before}
 
-This book is our final project for the 2021 Coracle Fellowship and our gift to the Coracle community. 
+We had the privilege of being Coracle Fellows in 2021. This book is our final project, borne out of the love, care, and reflection stimulated by that community.
 
-Kevin wrote Part 1. Evelyn, being the more skilled birder, wrote the reflections for each bird family in Part 2. The descriptions and photographs of each bird species were taken from `eBird.org`, a database of birding observations run by the Cornell Lab of Ornithology. 
+Evelyn came up with the idea for this field guide. wrote Part 1. Evelyn, being the more skilled birder, wrote the reflections for each bird family in Part 2. The descriptions and photographs of each bird species were taken from `eBird.org`, a database of birding observations run by the Cornell Lab of Ornithology. 
 
 Evelyn and Kevin wrote code to query `eBird.org` for recorded observations and descriptions of birds within a 5 kilometer radius of Corhaven in Quicksburg, VA. Evelyn then determined when each species tended to be observed, by liturgical season rather than by month. Kevin pulled all that information together to programmatically render into this book. For technically inclined readers, we have made the code 
 
@@ -66,7 +62,7 @@ fam_template <- "\\newpage ## %s {data-short-title=''}
 
 -----------------
 
-Reflections on the family.
+%s
 
 "
 
@@ -85,27 +81,32 @@ species_template <- "\\newpage ### %s {.unlisted}
 #   cat(sprintf(template, current$name, current$data, current$text))
 # }
 
-for (i in fam) {
+for (i in fam$birdFamily) {
     
     # Get current bird family
     fam_current <- i
     
     # Get all species within bird family
     fam_species <- df |>
-        filter(birdFamily == fam_current)
+      filter(birdFamily == fam_current)
+    
+    # Get bird family reflection
+    fam_reflection <- fam |>
+      filter(birdFamily == i) |>
+      pull(reflection)
     
     # Print bird family section header
-    cat(sprintf(fam_template, fam_current))
+    cat(sprintf(fam_template, fam_current, fam_reflection))
     
     # For all species within family, print an entry
     for (j in 1:nrow(fam_species)) {
-        cat(sprintf(species_template, 
-                    fam_species$comName[j], 
-                    fam_species$photo_path[j],
-                    fam_species$description[j],
-                    fam_species$typicalSeason[j]
-                    )
-            )
-    }
+      cat(sprintf(species_template, 
+                  fam_species$comName[j], 
+                  fam_species$photo_path[j],
+                  fam_species$description[j],
+                  fam_species$typicalSeason[j]
+                  )
+          )
+      }
 }
 ```
