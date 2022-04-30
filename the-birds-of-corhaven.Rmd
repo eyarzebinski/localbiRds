@@ -1,0 +1,111 @@
+---
+title: "The Birds of Corhaven"
+author: "Evelyn Yarzebinski & Kevin Soo"
+output:
+  pagedown::html_paged:
+    toc: true
+    toc_title: false
+    number_sections: false
+    chapter_name: false
+---
+```{r message=FALSE, echo=FALSE}
+# Load libraries
+library(tidyverse)
+library(glue)
+library(pagedown)
+
+# Load data
+df <- read_csv("tmp/corhaven_unique_birds_season_2022-02-08.csv") |> 
+  select(-url, -photo, -description, -percent) |> 
+  mutate(typicalSeason = as_factor(typicalSeason) |> 
+           fct_relevel("Advent", "Christmas", "Epiphany", "Lent", "Easter", "Ordinary Time")) |> 
+  group_by(birdFamily, comName, speciesCode) |> 
+  summarize(typicalSeason = str_c(typicalSeason, collapse = ", "))
+ebird <- read_csv("ebird_data.csv") |> 
+  mutate(photo_path = glue("photos/{speciesCode}.png"))
+
+# Get bird families
+fam <- ebird |> 
+  pull(birdFamily) |> 
+  unique()
+
+# Join dataframes
+df <- df |> 
+  left_join(ebird) 
+```
+
+## Preface {.page-break-before}
+
+This book is our final project for the 2021 Coracle Fellowship and our gift to the Coracle community. 
+
+Kevin wrote Part 1. Evelyn, being the more skilled birder, wrote the reflections for each bird family in Part 2. The descriptions and photographs of each bird species were taken from `eBird.org`, a database of birding observations run by the Cornell Lab of Ornithology. 
+
+Evelyn and Kevin wrote code to query `eBird.org` for recorded observations and descriptions of birds within a 5 kilometer radius of Corhaven in Quicksburg, VA. Evelyn then determined when each species tended to be observed, by liturgical season rather than by month. Kevin pulled all that information together to programmatically render into this book. For technically inclined readers, we have made the code 
+
+# Part 1: On birding {.page-break-before}
+
+## Introduction {.page-break-before}
+
+It is no stretch to say that birding saved our lives. In 2020, like many others, we found ourselves stuck at home and struggling through darkness. Watching the passage of time from the same window, we first started to notice the appearance of different kinds of birds and then their reappearances. 
+
+What were formerly "birds" to us acquired distinct personalities, colors, and sounds. They were named, they were known, and we saw that they were good. 
+
+## A note on Corhaven {.page-break-before}
+
+Coracle is a community, but it is also tied to a physical space.
+What region?
+
+## Birding for spiritual nourishment {.page-break-before}
+
+## Birding as virtue formation {.page-break-before}
+
+# Part 2: Field guide {.page-break-before}
+
+```{r echo=FALSE, results='asis'}
+fam_template <- "\\newpage ## %s {data-short-title=''}
+
+-----------------
+
+Reflections on the family.
+
+"
+
+species_template <- "\\newpage ### %s {.unlisted}
+
+![](%s){width=60%%}
+
+%s
+
+*Typical seasons: %s*
+
+"
+
+# for (i in seq(nrow(input))) {
+#   current <- input[i, ]
+#   cat(sprintf(template, current$name, current$data, current$text))
+# }
+
+for (i in fam) {
+    
+    # Get current bird family
+    fam_current <- i
+    
+    # Get all species within bird family
+    fam_species <- df |>
+        filter(birdFamily == fam_current)
+    
+    # Print bird family section header
+    cat(sprintf(fam_template, fam_current))
+    
+    # For all species within family, print an entry
+    for (j in 1:nrow(fam_species)) {
+        cat(sprintf(species_template, 
+                    fam_species$comName[j], 
+                    fam_species$photo_path[j],
+                    fam_species$description[j],
+                    fam_species$typicalSeason[j]
+                    )
+            )
+    }
+}
+```
