@@ -15,28 +15,43 @@ library(glue)
 library(pagedown)
 
 # Load data
-df <- read_csv("tmp/corhaven_unique_birds_season_2022-02-08.csv") |> 
+df <- read_csv("tmp/corhaven_unique_birds_season_2022-02-08.csv",
+               show_col_types = F) |> 
   select(-url, -photo, -description, -percent) |> 
   mutate(typicalSeason = as_factor(typicalSeason) |> 
            fct_relevel("Advent", "Christmas", "Epiphany", "Lent", "Easter", "Ordinary Time")) |> 
   group_by(birdFamily, comName, speciesCode) |> 
   summarize(typicalSeason = str_c(typicalSeason, collapse = ", "))
-ebird <- read_csv("ebird_data.csv") |> 
+
+ebird <- read_csv("ebird_data.csv",
+                  show_col_type = F) |> 
   mutate(photo_path = glue("photos/{speciesCode}.png"))
-fam <- read_csv("bird-family-reflections.csv")
+
+fam <- read_csv("bird-family-reflections.csv",
+                show_col_types = F)
 
 # Join dataframes
 df <- df |> 
   left_join(ebird) 
 ```
 
+##  {.page-break-before}
+
+
+
+
+To Micah. May your early, wide-eyed wonder at the outdoors grow to include birds one day. -e
+
+
 ## Preface {.page-break-before}
 
-We had the privilege of being Coracle Fellows in 2021. This book is our final project, borne out of the love, care, and reflection stimulated by that community.
+We had the privilege of being accepted as Coracle Fellows in the 2021 cohort. This field guide is our final project, borne out of the love, care, and reflection stimulated by that community.
 
-Evelyn came up with the idea for this field guide. wrote Part 1. Evelyn, being the more skilled birder, wrote the reflections for each bird family in Part 2. The descriptions and photographs of each bird species were taken from `eBird.org`, a database of birding observations run by the Cornell Lab of Ornithology. 
+Evelyn came up with the idea for this field guide after encountering some difficulties using a field guide as a novice birder. What if field guides could be more localized? Evelyn and Kevin, both data scientists, discussed how to bring this idea to light. We collaborated on writing code to query `eBird.org`, a citizen scientist website where birders can report their bird sightings and contribute to the overall understanding of birds and their behaviors. Our code downloaded all recorded observations of birds within a 5 kilometer radius of Corhaven in Quickburg, VA within the last 10 years. Evelyn wrote code to summarize and determine when each bird species tended to be observed near Corhaven in each season of the Christian liturgical calendar. Kevin wrote code to pull all of this together into this book.
 
-Evelyn and Kevin wrote code to query `eBird.org` for recorded observations and descriptions of birds within a 5 kilometer radius of Corhaven in Quicksburg, VA. Evelyn then determined when each species tended to be observed, by liturgical season rather than by month. Kevin pulled all that information together to programmatically render into this book. For technically inclined readers, we have made the code 
+Note that other than the code and reflections that underlie this guide, all other content - including bird descriptions and photos - comes from various sources, including Cornell University's eBird.org, National Geographic, and PBS. Birding, like Christianity, has a long history with many helpful contributions and perspectives from many individuals along the way. While innovation can be useful, it is often encouraged to discover and reference what others who have gone before have toiled to produce.
+
+-e
 
 # Part 1: On birding {.page-break-before}
 
@@ -46,17 +61,35 @@ It is no stretch to say that birding saved our lives. In 2020, like many others,
 
 What were formerly "birds" to us acquired distinct personalities, colors, and sounds. They were named, they were known, and we saw that they were good. 
 
+-k
+
 ## A note on Corhaven {.page-break-before}
 
 Coracle is a community, but it is also tied to a physical space.
 What region?
+
+-k
 
 ## Birding as spiritual practice {.page-break-before}
 
 Easter Meadowlark is the only Advent bird - waiting season!
 Helps us keep track of time, being in tune with God
 
+-k
+
 ## Birding as virtue formation {.page-break-before}
+
+In which we acquire virtue.
+
+## A note on the guide {.page-break-before}
+
+Unlike other bird field guides, one innovation we included here is each entry includes the Christian liturgical season(s) in which they most commonly occur. We found this to be a surprisingly fitting, and we hope you agree. 
+
+Creating an authoritative hyper-localized bird guide is a Sisyphean task: as soon as a new version is ready,  there will be weather systems, climate change, or other environmental factors that will influence the birds you may see in that area. You may not see the birds you expect to see, and you may even see birds you did not expect to see. Therefore, this guide was not designed to be authoritative. This guide is a combination of birds that either we have personally observed in the Corhaven area, or that other have reported observing on eBird.org. Your own mileage may vary.
+
+... add note about seasons
+
+-e 
 
 # Part 2: Field guide {.page-break-before}
 
