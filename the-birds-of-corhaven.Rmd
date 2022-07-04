@@ -37,15 +37,11 @@ df <- df |>
 
 ##  {.page-break-before}
 
-
-
-
 To Micah. May your early, wide-eyed wonder at the outdoors grow to include birds one day. -e
-
 
 ## Preface {.page-break-before}
 
-We had the privilege of being accepted as Coracle Fellows in the 2021 cohort. This field guide is our final project, borne out of the love, care, and reflection stimulated by that community.
+We had the privilege of participating in the Coracle Fellowship in 2021. This field guide is our final project, borne out of the love, care, and reflection stimulated by that community.
 
 Evelyn came up with the idea for this field guide after encountering some difficulties using a field guide as a novice birder. What if field guides could be more localized? Evelyn and Kevin, both data scientists, discussed how to bring this idea to light. We collaborated on writing code to query `eBird.org`, a citizen scientist website where birders can report their bird sightings and contribute to the overall understanding of birds and their behaviors. Our code downloaded all recorded observations of birds within a 5 kilometer radius of Corhaven in Quickburg, VA within the last 10 years. Evelyn wrote code to summarize and determine when each bird species tended to be observed near Corhaven in each season of the Christian liturgical calendar. Kevin wrote code to pull all of this together into this book.
 
