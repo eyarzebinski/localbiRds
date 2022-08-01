@@ -37,15 +37,11 @@ df <- df |>
 
 ##  {.page-break-before}
 
-
-
-
 To Micah. May your early, wide-eyed wonder at the outdoors grow to include birds one day. -e
-
 
 ## Preface {.page-break-before}
 
-We had the privilege of being accepted as Coracle Fellows in the 2021 cohort. This field guide is our final project, borne out of the love, care, and reflection stimulated by that community.
+We had the privilege of participating in the Coracle Fellowship in 2021. This field guide is our final project, borne out of the love, care, and reflection stimulated by that community.
 
 Evelyn came up with the idea for this field guide after encountering some difficulties using a field guide as a novice birder. What if field guides could be more localized? Evelyn and Kevin, both data scientists, discussed how to bring this idea to light. We collaborated on writing code to query `eBird.org`, a citizen scientist website where birders can report their bird sightings and contribute to the overall understanding of birds and their behaviors. Our code downloaded all recorded observations of birds within a 5 kilometer radius of Corhaven in Quickburg, VA within the last 10 years. Evelyn wrote code to summarize and determine when each bird species tended to be observed near Corhaven in each season of the Christian liturgical calendar. Kevin wrote code to pull all of this together into this book.
 
@@ -57,29 +53,61 @@ Note that other than the code and reflections that underlie this guide, all othe
 
 ## Introduction {.page-break-before}
 
-It is no stretch to say that birding saved our lives. In 2020, like many others, we found ourselves stuck at home and struggling through darkness. Watching the passage of time from the same window, we first started to notice the appearance of different kinds of birds and then their reappearances. 
+It is no stretch to say that birding saved our lives. In early 2020, we were struggling through a season of personal darkness, which was compounded by being shut off from much of the outside world due to the Covid-19 pandemic. We spent many days watching the passage of time from the our dining room window, unable to see beyond our present reality in which we failed to flourish. 
 
-What were formerly "birds" to us acquired distinct personalities, colors, and sounds. They were named, they were known, and we saw that they were good. 
+It was around spring that we first started to notice the appearance (and then reappearance) of different kinds of birds through that same window. What were formerly "birds" to us became individual creatures. Different species became associated with distinct personalities, colors, and sounds. We bought a field guide to help us identify them, which transformed them in our eyes. They were *named*, they were *known*, and because they evoked in us a hint of the joy one feels when we realize someone has become familiar, we saw that they were *good.* 
+
+The birds drew us outside of our home and ourselves. They called to us and gave us a reason to look and venture outwards. They gave structure to our days and weeks as we learned of their rhythms. Finally they became, to our surprise, reminders of God's kindness and presence with us through the seasons. Like God, birds come in and out of our view, but they are always around.
+
+The significance of birds has a rich heritage within Christian tradition. Besides being mentioned and playing critical symbolic roles within the Bible, they have been used as symbols in Christian art for centuries. There were numerous stories in the early days of the church of its saints and mystics befriending birds. More recently, the late John Stott was a lover of birds, writing *The Birds Our Teachers: Biblical Lessons from a Lifelong Bird Watcher*, which can be found in the Corhaven library.
+
+To anyone with eyes to see and ears to hear, we believe the practice of birding has much to offer us in our spiritual formation. It cultivates a sense of wonder and love of creation. It forms good habits and virtues in those who give themselves to the practice. It has the potential to draw humans into deeper communion with the living God, who rules over much more than the birds, but certainly not less.
 
 -k
 
 ## A note on Corhaven {.page-break-before}
 
-Coracle is a community, but it is also tied to a physical space.
-What region?
+Coracle is a living and breathing community of people knitted together by the Spirit and the humble work of its stewards. Its people are joined by a shared desire for deep spiritual communion, which transcends church traditions and localities. Despite its transcendent quality, Coracle is also tied intimately to a physical space. If you are reading this at Corhaven, you will be familiar with how the veil between God's space and ours seems to be just a little bit thinner there. I suspect that through common use, consecration, and cultivation of the grounds and buildings of Corhaven, it has been molded into a shape that is well-suited to revealing God's presence. 
 
--k
+Taking a walk around Corhaven, you will likely notice the chickens patrolling the grounds (they are not included in this field guide). Look above on a sunny day, and you may see Turkey Vultures circling overhead. Venture through Corhaven's paths into the woods and you will likely hear birds calling and singing (though they may be hard to spot). Like human communities, birds are tied to physical space and time. Specifically, most of them are tied to certain spaces at certain times -- i.e. they are seasonal. You can only really notice this if you try birding in the same place over time. 
 
-## Birding as spiritual practice {.page-break-before}
-
-Easter Meadowlark is the only Advent bird - waiting season!
-Helps us keep track of time, being in tune with God
+Corhaven, in Quicksburg VA, is located close enough to migration pathways on the East coast to host a variety of birds. In addition, its setting among farmland, forests, and the Appalachian Mountains make it a welcoming habitat. Closer to Corhaven itself, the lush woods and Holman's Creek on the back of the grounds offer plenty of hiding and feeding spots for birds. All these factors make Corhaven a challenging but potentially rewarding place for birding.
 
 -k
 
 ## Birding as virtue formation {.page-break-before}
 
-In which we acquire virtue.
+When asked about my hobbies, I am likely to launch into a discourse of why I love birds and the practice of identifying them. Whether the person asking the question has any interest in what I have to say is questionable. What is unquestionable, is that my answers flow naturally out of me because the practice of birding has fundamentally changed the kind of person I am.
+
+Any practice, if embraced wholeheartedly over time, has the potential to shape its practitioners. In that respect, birding is not unique. With the exception of a lucky (or fanatical) minority, most of us partake in and are shaped by a diversity of practices. Human beings spend time birding, working, parenting, gardening, and so much more. Some of these practices form virtue in us, while others form vices (typically, each practice forms some combination of both). Most of this formation happens beneath the level of our conscious awareness, so it is worth reflecting from time to time on the kinds of people we are becoming as a result of our participation in a particular practice.
+
+Birding is the first proper hobby I've discovered as a working adult. It had been awhile since I felt driven to learn anything and everything I could about a new domain, which brought me back to my younger years when I would experience the rush of unearthing and navigating the intricacies of a new activity (the last one was when I picked up rock climbing in college). I found that birding cultivated my capacity for childlike *awe* and *joy*. It taught me once again to be excited rather than cynical or skeptical about something out in the world. It taught me that there is so much more in the world that is worth knowing, and that it is worthwhile to spend time and energy to learn about it.
+
+While birding evokes childlike wonder, it simultaneously cultivates more adult virtues like *conscientiousness* and *care*. It is certainly possible to identify and catalog birds in a mostly self-serving manner (e.g. to run up one's tally of observations), but even that relies on the generosity and care of others who make birding information and knowledge readily available. Birding is a shared practice and draws you into a community, and to be initiated into this community is to care about the effect one has on other birders, the environment, and of course, the birds. Because one can only begin birding in light of the generosity of others, the practice invites you to give and care for others.
+
+Because I am newer to birding and lack years of hard-earned knowledge that would allow identifying birds to come "naturally", I have had to acquire the basics of birding through intentional *discipline*, via repetition and practice. I read up on common species to look out for in new birding locations I visit. I track recent observations from birding websites (and a web-app Evelyn and I built) to decide where to go birding. I hone my bird photography skills through trial and error. I study my field guide to memorize subtle cues to help identification. Like with all virtues, the point of intentional disciplines is to make a certain way of being "second nature". There will come a day when all this comes naturally, but it will likely take years of treating birding as an intentional discipline.
+
+Finally, birding cultivates my ability to *love*. Birding assumes there are things outside of myself worth contemplating, and as I come to know them, I discover that they are not mere objects, but subjects with their own exterior and (I assume) interior lives. Love, the great theologians have argued, is a form of knowing. One cannot truly know something without loving it, and one cannot love something without truly knowing it. I believe that birding cultivates a million different virtues, but the greatest of these is love.
+
+## Birding as part of the spiritual life {.page-break-before}
+
+At its core, birding is a practice by which we come to know birds as subjects and creatures. As subjects, birds are distinct from us. This may seem a trivial truth, but in a world that elevates self and autonomy, it is no small thing to be reminded that there are beings beyond ourselves with dynamic lives of their own. As creatures, birds are simultaneously part of the created order and distinct from each other. Thus, they reveal the world's (literal and figurative) diversity and color, which makes them worth knowing.
+
+What is the goal of the spiritual life if not to become better subjects and creatures within the created order and in relation to God our Creator? Our capacity to receive the practice of birding as a gift, if we embrace it, parallels and enhances our capacity to receive spiritual life. 
+
+Birds are warm-blooded animals constituting the class *Aves* (Latin for 'bird'). There are nearly 11,000 species of bird worldwide, and they all share many genetic, biological, and physiological characteristics. These are related in fascinating ways, but it would be a mistake to think birds are reducible to these physical characteristics alone. It is of course possible to view birds as only configurations of physical characteristics, but all birders (and ornithologists) are drawn to them for their beauty and distinct personalities.
+
+Similarly, it is possible to view the world only as a complex system of physical, economic, and social forces. That is to view the world as *nature*, as mere matter. Those forces are certainly at play, but any Christian living the spiritual life knows how impoverished such a view is. The world is not mere nature, but *creation* charged with the presence of a Creator God who continues creating and interacting with the world. Although birding is about noticing what is there, it beckons us to see not just the birds, but beyond the birds themselves.
+
+One of my favorite aspects of birding is the seasonality of birds. They come and go in predictable patterns. Many species of waterfowl show up near our home in Virginia in the winter. Songbirds show up in the spring. Birding invites us to stay and patiently await old friends, and gives us a sense of the passing of time. 
+
+The importance of time to the spiritual life should not surprise mature Christians. God brings Christians through different seasons of life. Every year, the Christian calendar draws us into the unfolding drama of God's people as we walk through Advent, Christmas, Epiphany, Lent, Easter, Pentecost, and Ordinary time. Each season has its place in time and in the spiritual life, and it is sacrilegious to skip any one season to rush towards another. God appears to teach us different things in and through different seasons, and to expect otherwise would be as foolish as looking for Warblers in the middle of winter.
+
+Finally, birding forces us to acknowledge that we are ultimately recipients of a gift. We can, and indeed should, prepare and plan as best we can for any birding expedition. Learning the behaviors, habitats, and seasonality of different species will increase one's likelihood of encountering birds of interest. Having the right equipment and technique helps, too. But ultimately, nothing is guaranteed or owed to us. The birds will do as they please, and if they deign to appear, it should be received as grace. 
+
+So too with the spiritual life. We worship, pray, and study so that we might become more attuned to God's whispers and presence. In a sense, God is always speaking and present. But in a deeper sense, our limitations as creatures mean we should always be listening and watching as if God could appear as a bird in a bush. *"The wind blows where it chooses, and you hear the sound of it, but you do not know where it comes from or where it goes"* (John 3:8). Likewise, the birds fly where they will, and you may hear their song, but you do not know where it comes from or where it goes.
+
+-k
 
 ## A note on the guide {.page-break-before}
 
