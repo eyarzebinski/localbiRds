@@ -8,12 +8,14 @@ birdFamily,comName,speciesCode,typicalSeason
 Alaudidae: Larks,Horned Lark,horlar,Epiphany
 Alcedinidae: Kingfishers,Belted Kingfisher,belkin1,Ordinary Time (early)
 "Anatidae: Swans, Geese & Ducks",American Black Duck,ambduc,Advent
+"Anatidae: Swans, Geese & Ducks",American Black Duck,ambduc,Christmas
 "Anatidae: Swans, Geese & Ducks",American Wigeon,amewig,Lent
 "Anatidae: Swans, Geese & Ducks",Blue-winged Teal,buwtea,Lent
 "Anatidae: Swans, Geese & Ducks",Canada Goose,cangoo,Epiphany
 "Anatidae: Swans, Geese & Ducks",Canvasback,canvas,Lent
 "Anatidae: Swans, Geese & Ducks",Common Merganser,commer,Epiphany
 "Anatidae: Swans, Geese & Ducks",Gadwall,gadwal,Lent
+"Anatidae: Swans, Geese & Ducks",Green-winged Teal,gnwtea,Christmas
 "Anatidae: Swans, Geese & Ducks",Green-winged Teal,gnwtea,Advent
 "Anatidae: Swans, Geese & Ducks",Hooded Merganser,hoomer,Epiphany
 "Anatidae: Swans, Geese & Ducks",Hooded Merganser,hoomer,Lent
@@ -65,6 +67,7 @@ Hirundinidae: Martins and Swallows,Tree Swallow,treswa,Ordinary Time (early)
 "Mimidae: Catbirds, Mockingbirds & Thrashers",Gray Catbird,grycat,Ordinary Time (early)
 "Mimidae: Catbirds, Mockingbirds & Thrashers",Northern Mockingbird,normoc,Ordinary Time (early)
 Motacillidae: Pipits,American Pipit,amepip,Advent
+Motacillidae: Pipits,American Pipit,amepip,Christmas
 Paridae: Chickadees and Titmice,Black-capped Chickadee,bkcchi,Ordinary Time (late)
 Paridae: Chickadees and Titmice,Carolina Chickadee,carchi,Ordinary Time (early)
 Paridae: Chickadees and Titmice,Tufted Titmouse,tuftit,Ordinary Time (late)
