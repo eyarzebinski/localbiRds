@@ -1,4 +1,4 @@
-birdFamily,comName,speciesCode,typicalSeason
+birdFamily,comName,speciesCode,liturgicalSeason_final
 "Accipitridae: Kites, Hawks & Eagles",Bald Eagle,baleag,Ordinary Time (late)
 "Accipitridae: Kites, Hawks & Eagles",Cooper's Hawk,coohaw,Ordinary Time (early)
 "Accipitridae: Kites, Hawks & Eagles",Cooper's Hawk,coohaw,Ordinary Time (late)
@@ -15,8 +15,8 @@ Alcedinidae: Kingfishers,Belted Kingfisher,belkin1,Ordinary Time (early)
 "Anatidae: Swans, Geese & Ducks",Canvasback,canvas,Lent
 "Anatidae: Swans, Geese & Ducks",Common Merganser,commer,Epiphany
 "Anatidae: Swans, Geese & Ducks",Gadwall,gadwal,Lent
-"Anatidae: Swans, Geese & Ducks",Green-winged Teal,gnwtea,Christmas
 "Anatidae: Swans, Geese & Ducks",Green-winged Teal,gnwtea,Advent
+"Anatidae: Swans, Geese & Ducks",Green-winged Teal,gnwtea,Christmas
 "Anatidae: Swans, Geese & Ducks",Hooded Merganser,hoomer,Epiphany
 "Anatidae: Swans, Geese & Ducks",Hooded Merganser,hoomer,Lent
 "Anatidae: Swans, Geese & Ducks",Mallard,mallar3,Lent
@@ -41,6 +41,8 @@ Cathartidae: New World Vultures,Turkey Vulture,turvul,Ordinary Time (late)
 Charadriidae: Plovers,Killdeer,killde,Ordinary Time (late)
 Charadriidae: Plovers,Semipalmated Plover,semplo,Easter
 Columbidae: Pigeons and Doves,Mourning Dove,moudov,Ordinary Time (early)
+Columbidae: Pigeons and Doves,Rock Pigeon,rocpig,Epiphany
+Columbidae: Pigeons and Doves,Rock Pigeon,rocpig,Ordinary Time (late)
 "Corvidae: Jays, Crows & Magpies",American Crow,amecro,Ordinary Time (late)
 "Corvidae: Jays, Crows & Magpies",Blue Jay,blujay,Ordinary Time (late)
 "Corvidae: Jays, Crows & Magpies",Common Raven,comrav,Lent
@@ -132,5 +134,3 @@ Vireonidae: Vireos,Blue-headed Vireo,buhvir,Ordinary Time (late)
 Vireonidae: Vireos,Red-eyed Vireo,reevir1,Easter
 Vireonidae: Vireos,Red-eyed Vireo,reevir1,Ordinary Time (early)
 Vireonidae: Vireos,Warbling Vireo,warvir,Easter
-NA,Rock Pigeon,rocpig,Epiphany
-NA,Rock Pigeon,rocpig,Ordinary Time (late)

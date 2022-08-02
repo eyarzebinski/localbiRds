@@ -4,7 +4,9 @@ library(tidyverse)
 library(glue)
 library(rvest)
 
-df <- read_csv("tmp/corhaven_unique_birds_season_2022-02-08.csv") |> 
+# df <- read_csv("tmp/corhaven_unique_birds_season_2022-02-08.csv") |> 
+df <- read_csv("tmp/unique_birds_season.csv") |> 
+    mutate(url = paste0("https://ebird.org/species/", speciesCode)) |> 
     count(birdFamily, comName, speciesCode, url) |> 
     select(-n)
 df$description <- NA
