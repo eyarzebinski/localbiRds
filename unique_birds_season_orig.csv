@@ -1,0 +1,121 @@
+birdFamily,comName,speciesCode,liturgicalSeason_collapsed
+"Accipitridae: Kites, Hawks & Eagles",Bald Eagle,baleag,Ordinary Time
+"Accipitridae: Kites, Hawks & Eagles",Cooper's Hawk,coohaw,Ordinary Time
+"Accipitridae: Kites, Hawks & Eagles",Red-shouldered Hawk,reshaw,Epiphany
+"Accipitridae: Kites, Hawks & Eagles",Red-tailed Hawk,rethaw,Ordinary Time
+Alaudidae: Larks,Horned Lark,horlar,Epiphany
+Alcedinidae: Kingfishers,Belted Kingfisher,belkin1,Ordinary Time
+"Anatidae: Swans, Geese & Ducks",American Black Duck,ambduc,Advent
+"Anatidae: Swans, Geese & Ducks",American Wigeon,amewig,Lent
+"Anatidae: Swans, Geese & Ducks",Blue-winged Teal,buwtea,Lent
+"Anatidae: Swans, Geese & Ducks",Canada Goose,cangoo,Epiphany
+"Anatidae: Swans, Geese & Ducks",Canvasback,canvas,Lent
+"Anatidae: Swans, Geese & Ducks",Common Merganser,commer,Epiphany
+"Anatidae: Swans, Geese & Ducks",Gadwall,gadwal,Lent
+"Anatidae: Swans, Geese & Ducks",Green-winged Teal,gnwtea,Advent
+"Anatidae: Swans, Geese & Ducks",Hooded Merganser,hoomer,"Epiphany, Lent"
+"Anatidae: Swans, Geese & Ducks",Mallard,mallar3,"Lent, Ordinary Time"
+"Anatidae: Swans, Geese & Ducks",Northern Shoveler,norsho,Lent
+"Anatidae: Swans, Geese & Ducks",Ring-necked Duck,rinduc,Advent
+"Anatidae: Swans, Geese & Ducks",Ruddy Duck,rudduc,Easter
+"Anatidae: Swans, Geese & Ducks",Tundra Swan,tunswa,Lent
+"Anatidae: Swans, Geese & Ducks",Wood Duck,wooduc,"Lent, Ordinary Time"
+Apodidae: Swifts,Chimney Swift,chiswi,Ordinary Time
+"Ardeidae: Bitterns, Herons & Egrets",Great Blue Heron,grbher3,Ordinary Time
+"Ardeidae: Bitterns, Herons & Egrets",Great Egret,greegr,Ordinary Time
+"Ardeidae: Bitterns, Herons & Egrets",Green Heron,grnher,Ordinary Time
+Bombycillidae: Waxwings,Cedar Waxwing,cedwax,Ordinary Time
+Caprimulgidae: Goatsuckers,Common Nighthawk,comnig,Ordinary Time
+"Cardinalidae: Tanagers, Cardinals, Grosbeaks & Dickcissels",Blue Grosbeak,blugrb1,Ordinary Time
+"Cardinalidae: Tanagers, Cardinals, Grosbeaks & Dickcissels",Indigo Bunting,indbun,Ordinary Time
+"Cardinalidae: Tanagers, Cardinals, Grosbeaks & Dickcissels",Northern Cardinal,norcar,Ordinary Time
+"Cardinalidae: Tanagers, Cardinals, Grosbeaks & Dickcissels",Rose-breasted Grosbeak,robgro,"Easter, Ordinary Time"
+"Cardinalidae: Tanagers, Cardinals, Grosbeaks & Dickcissels",Scarlet Tanager,scatan,Ordinary Time
+Cathartidae: New World Vultures,Black Vulture,blkvul,Ordinary Time
+Cathartidae: New World Vultures,Turkey Vulture,turvul,Ordinary Time
+Charadriidae: Plovers,Killdeer,killde,Ordinary Time
+Charadriidae: Plovers,Semipalmated Plover,semplo,Easter
+Columbidae: Pigeons and Doves,Mourning Dove,moudov,Ordinary Time
+"Corvidae: Jays, Crows & Magpies",American Crow,amecro,Ordinary Time
+"Corvidae: Jays, Crows & Magpies",Blue Jay,blujay,Ordinary Time
+"Corvidae: Jays, Crows & Magpies",Common Raven,comrav,Ordinary Time
+"Corvidae: Jays, Crows & Magpies",Fish Crow,fiscro,Ordinary Time
+Cuculidae: Cuckoos and Anis,Yellow-billed Cuckoo,yebcuc,Ordinary Time
+Falconidae: Falcons,American Kestrel,amekes,Ordinary Time
+"Fringillidae: Siskins, Crossbills & Allies",American Goldfinch,amegfi,Ordinary Time
+"Fringillidae: Siskins, Crossbills & Allies",House Finch,houfin,Ordinary Time
+"Fringillidae: Siskins, Crossbills & Allies",Purple Finch,purfin,Ordinary Time
+Hirundinidae: Martins and Swallows,Bank Swallow,banswa,Ordinary Time
+Hirundinidae: Martins and Swallows,Barn Swallow,barswa,Ordinary Time
+Hirundinidae: Martins and Swallows,Cliff Swallow,cliswa,Ordinary Time
+Hirundinidae: Martins and Swallows,Northern Rough-winged Swallow,nrwswa,Ordinary Time
+Hirundinidae: Martins and Swallows,Purple Martin,purmar,Ordinary Time
+Hirundinidae: Martins and Swallows,Tree Swallow,treswa,Ordinary Time
+"Icteridae: Blackbirds, Meadowlarks & Orioles",Baltimore Oriole,balori,"Easter, Ordinary Time"
+"Icteridae: Blackbirds, Meadowlarks & Orioles",Brown-headed Cowbird,bnhcow,"Advent, Ordinary Time"
+"Icteridae: Blackbirds, Meadowlarks & Orioles",Common Grackle,comgra,Epiphany
+"Icteridae: Blackbirds, Meadowlarks & Orioles",Eastern Meadowlark,easmea,Ordinary Time
+"Icteridae: Blackbirds, Meadowlarks & Orioles",Orchard Oriole,orcori,Ordinary Time
+"Icteridae: Blackbirds, Meadowlarks & Orioles",Red-winged Blackbird,rewbla,Ordinary Time
+"Laridae: Gulls, Terns & Skimmers",Ring-billed Gull,ribgul,Lent
+"Mimidae: Catbirds, Mockingbirds & Thrashers",Brown Thrasher,brnthr,Ordinary Time
+"Mimidae: Catbirds, Mockingbirds & Thrashers",Gray Catbird,grycat,Ordinary Time
+"Mimidae: Catbirds, Mockingbirds & Thrashers",Northern Mockingbird,normoc,Ordinary Time
+Motacillidae: Pipits,American Pipit,amepip,Advent
+Paridae: Chickadees and Titmice,Black-capped Chickadee,bkcchi,Ordinary Time
+Paridae: Chickadees and Titmice,Carolina Chickadee,carchi,Ordinary Time
+Paridae: Chickadees and Titmice,Tufted Titmouse,tuftit,Ordinary Time
+Parulidae: Wood Warblers,American Redstart,amered,Easter
+Parulidae: Wood Warblers,Black-and-white Warbler,bawwar,Ordinary Time
+Parulidae: Wood Warblers,Black-throated Green Warbler,btnwar,Easter
+Parulidae: Wood Warblers,Chestnut-sided Warbler,chswar,Ordinary Time
+Parulidae: Wood Warblers,Northern Parula,norpar,Easter
+Parulidae: Wood Warblers,Ovenbird,ovenbi1,Easter
+Parulidae: Wood Warblers,Pine Warbler,pinwar,Ordinary Time
+Parulidae: Wood Warblers,Prairie Warbler,prawar,Easter
+Parulidae: Wood Warblers,Worm-eating Warbler,woewar1,Easter
+Parulidae: Wood Warblers,Yellow-rumped Warbler,yerwar,Ordinary Time
+Passerellidae: New World Sparrows and Towhees,Chipping Sparrow,chispa,Ordinary Time
+Passerellidae: New World Sparrows and Towhees,Dark-eyed Junco,daejun,"Epiphany, Lent"
+Passerellidae: New World Sparrows and Towhees,Eastern Towhee,eastow,Ordinary Time
+Passerellidae: New World Sparrows and Towhees,Field Sparrow,fiespa,Ordinary Time
+Passerellidae: New World Sparrows and Towhees,Savannah Sparrow,savspa,Lent
+Passerellidae: New World Sparrows and Towhees,Song Sparrow,sonspa,Ordinary Time
+Passerellidae: New World Sparrows and Towhees,White-crowned Sparrow,whcspa,Epiphany
+Passerellidae: New World Sparrows and Towhees,White-throated Sparrow,whtspa,"Epiphany, Lent"
+Passeridae: Old World Sparrows,House Sparrow,houspa,Ordinary Time
+Phasianidae: Grouse and Turkeys,Wild Turkey,wiltur,Ordinary Time
+Picidae: Woodpeckers,Downy Woodpecker,dowwoo,Ordinary Time
+Picidae: Woodpeckers,Hairy Woodpecker,haiwoo,Ordinary Time
+Picidae: Woodpeckers,Northern Flicker,norfli,Ordinary Time
+Picidae: Woodpeckers,Pileated Woodpecker,pilwoo,Ordinary Time
+Picidae: Woodpeckers,Red-bellied Woodpecker,rebwoo,Ordinary Time
+Picidae: Woodpeckers,Red-headed Woodpecker,rehwoo,Ordinary Time
+Picidae: Woodpeckers,Yellow-bellied Sapsucker,yebsap,Ordinary Time
+Regulidae: Kinglets,Golden-crowned Kinglet,gockin,Lent
+Regulidae: Kinglets,Ruby-crowned Kinglet,ruckin,Ordinary Time
+Scolopacidae: Sandpipers,Greater Yellowlegs,greyel,Easter
+Scolopacidae: Sandpipers,Least Sandpiper,leasan,Ordinary Time
+Scolopacidae: Sandpipers,Lesser Yellowlegs,lesyel,Easter
+Scolopacidae: Sandpipers,Solitary Sandpiper,solsan,"Easter, Ordinary Time"
+Scolopacidae: Sandpipers,Spotted Sandpiper,sposan,Easter
+Scolopacidae: Sandpipers,Wilson's Snipe,wilsni1,Lent
+Sittidae: Nuthatches,White-breasted Nuthatch,whbnut,Ordinary Time
+Strigidae: Typical Owls,Eastern Screech-Owl,easowl1,Ordinary Time
+Sturnidae: Starlings,European Starling,eursta,Advent
+Sylviidae: Gnatcatchers,Blue-gray Gnatcatcher,buggna,Ordinary Time
+Trochilidae: Hummingbirds,Ruby-throated Hummingbird,rthhum,Ordinary Time
+Troglodytidae: Wrens,Carolina Wren,carwre,Ordinary Time
+Troglodytidae: Wrens,House Wren,houwre,Ordinary Time
+Turdidae: Thrushes,American Robin,amerob,"Lent, Ordinary Time"
+Turdidae: Thrushes,Eastern Bluebird,easblu,Ordinary Time
+Turdidae: Thrushes,Wood Thrush,woothr,Easter
+Tyrannidae: Tyrant Flycatchers,Eastern Kingbird,easkin,Ordinary Time
+Tyrannidae: Tyrant Flycatchers,Eastern Phoebe,easpho,Ordinary Time
+Tyrannidae: Tyrant Flycatchers,Eastern Wood-Pewee,eawpew,Ordinary Time
+Tyrannidae: Tyrant Flycatchers,Great Crested Flycatcher,grcfly,"Easter, Ordinary Time"
+Tyrannidae: Tyrant Flycatchers,Willow Flycatcher,wilfly,Ordinary Time
+Vireonidae: Vireos,Blue-headed Vireo,buhvir,Ordinary Time
+Vireonidae: Vireos,Red-eyed Vireo,reevir1,"Easter, Ordinary Time"
+Vireonidae: Vireos,Warbling Vireo,warvir,Easter
+NA,Rock Pigeon,rocpig,Ordinary Time

@@ -1,4 +1,4 @@
-# Pull hyperlocal bird reports
+# Pull hyperlocal bird reports from ebird
 # by: Evelyn Yarzebinski, 2021-11
 # TODO - make auto-publish doc
 

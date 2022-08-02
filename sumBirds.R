@@ -10,10 +10,19 @@ library(tibble)
 
 # Parameters
 nRecent = 11 # Include observations from nRecent last years
-distance_from = 5 # Maximum distance of observation from point of interest
+distance_from = 5 # Maximum distance of observation from point of interest (in km)
 
 # File name to read
 birdFile = "corhaven"
+
+# Order of seasons
+seasonOrder = c("Advent",
+                "Christmas",
+                "Epiphany",
+                "Lent",
+                "Easter",
+                "Ordinary Time (early)",
+                "Ordinary Time (late)")
 
 # File containing all observations from eBird
 birds = read_csv(paste0(birdFile,".csv"))
@@ -31,13 +40,13 @@ birdFamily = read_csv("birdFamily.csv") %>%
 # Clean date to get range
 liturgicalSeasonLookup = read_csv("liturgicalDateBoundaries.csv") %>%
   mutate(season_start = lubridate::mdy(date),
-         liturgicalSeason_collapsed = factor(liturgicalSeason_collapsed, levels = seasonOrder)) %>%
-  group_by(year, liturgicalSeason_collapsed) %>%
+         liturgicalSeason_final = factor(liturgicalSeason_final, levels = seasonOrder)) %>%
+  group_by(year, liturgicalSeason_final) %>%
   summarise(season_start = min(season_start)) %>%
   ungroup() %>%
   arrange(season_start) %>%
   mutate(season_end = lead(season_start) - 1) %>%
-  mutate(liturgicalSeason_collapsed = as.character(liturgicalSeason_collapsed))
+  mutate(liturgicalSeason_final = as.character(liturgicalSeason_final))
 
 # Last season (Christmas 2021) ends before Epiphany on Jan 6, 2022
 liturgicalSeasonLookup$season_end[nrow(liturgicalSeasonLookup)] = ymd("2022-01-06") - 1
@@ -60,15 +69,15 @@ birds_df = birds_df %>%
   left_join(birdFamily, by = "comName")
 
 # join in the liturgical seasons by closest inclusive date from liturgicalSeasonLookup applied to obsDt
-birds_df$liturgicalSeason_collapsed = NA
+birds_df$liturgicalSeason_final = NA
 
 for (i in 1:nrow(birds_df)) {
   date = birds_df$obsDt[i]
   which_season = liturgicalSeasonLookup %>%
     mutate(this_season = date %within% liturgicalSeasonLookup$season) %>%
     filter(this_season == TRUE) %>%
-    pull(liturgicalSeason_collapsed)
-  birds_df$liturgicalSeason_collapsed[i] = which_season
+    pull(liturgicalSeason_final)
+  birds_df$liturgicalSeason_final[i] = which_season
   print(i)
 }
 
@@ -78,11 +87,12 @@ seasonOrder = c("Advent",
                 "Epiphany",
                 "Lent",
                 "Easter",
-                "Ordinary Time")
+                "Ordinary Time (early)",
+                "Ordinary Time (late)")
 
 # Change seasons to a factor so it's ordered
 birds_df = birds_df %>%
-  mutate(liturgicalSeason_collapsed = factor(liturgicalSeason_collapsed, levels = seasonOrder))
+  mutate(liturgicalSeason_final = factor(liturgicalSeason_final, levels = seasonOrder))
 
 # Get all years in the supplied df
 years = birds_df %>%
@@ -177,18 +187,18 @@ unique_birds_month = birds_df %>%
   group_by(birdFamily,
            comName,
            speciesCode,
-           liturgicalSeason_collapsed) %>%
+           liturgicalSeason_final) %>%
   dplyr::summarize(totalBirds = sum(howMany)) %>%
   mutate(grandTotal = sum(totalBirds),
          pct = totalBirds / grandTotal,
-         pct_round = round(pct/.1)*.1, # Round percentage to nearest 10%
+         pct_round = round(pct/.05)*.05, # Round percentage to nearest 5%
          is_typical = (pct_round == max(pct_round))) %>% # is_typical if the rounded pct is the max for group
   filter(is_typical) %>%
-  select(comName, speciesCode, liturgicalSeason_collapsed) |> 
+  select(comName, speciesCode, liturgicalSeason_final) |> 
   ungroup() %>%
   group_by(birdFamily, comName, speciesCode) %>%
-  # For birds with multiple typical seasons, combine those seasons into a single string, then drop duplicated rows
-  mutate(liturgicalSeason_collapsed = paste0(liturgicalSeason_collapsed, collapse = ", ")) %>%
+  ## For birds with multiple typical seasons, combine those seasons into a single string, then drop duplicated rows
+  #mutate(liturgicalSeason_final = paste0(liturgicalSeason_final, collapse = ", ")) %>%
   distinct()
 
 # Write unique birds and their seasons
