@@ -15,10 +15,13 @@ library(glue)
 library(pagedown)
 
 # Load data
-df <- read_csv("tmp/unique_birds_season.csv",
-               show_col_types = F) |>
+df <- read_csv("tmp/corhaven_unique_birds_season_2022-02-08.csv",
+               show_col_types = F) |> 
+  select(-url, -photo, -description, -percent) |> 
   mutate(typicalSeason = as_factor(typicalSeason) |> 
-           fct_relevel("Advent", "Epiphany", "Lent", "Easter", "Ordinary Time (early)", "Ordinary Time (late)"))
+           fct_relevel("Advent", "Christmas", "Epiphany", "Lent", "Easter", "Ordinary Time")) |> 
+  group_by(birdFamily, comName, speciesCode) |> 
+  summarize(typicalSeason = str_c(typicalSeason, collapse = ", "))
 
 ebird <- read_csv("ebird_data.csv",
                   show_col_type = F) |> 
