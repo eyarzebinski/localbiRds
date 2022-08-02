@@ -35,9 +35,13 @@ df <- df |>
   left_join(ebird) 
 ```
 
-##  {.page-break-before, .unlisted}
+##  {.unlisted}
+
+\newpage
 
 To Micah. May your early, wide-eyed wonder at the outdoors grow to include birds one day. -e
+
+Micah, it's too early, go back to sleep. -k
 
 ## Preface {.page-break-before}
 
