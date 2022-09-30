@@ -47,7 +47,7 @@ Micah, you bring us more joy than a thousand warblers during spring migration. *
 
 We were privileged to participate in the 2021 Coracle Fellowship cohort. This field guide is our final project, borne out of the love, care, and reflection stimulated by that community.
 
-Evelyn came up with the idea for this field guide after encountering difficulties using a field guide as a novice birder. What if field guides could be more localized? Evelyn and Kevin, both data scientists, discussed how to bring this idea to light. We collaborated on writing code to query `eBird.org`, a "citizen science" website where birders can report their sightings and contribute to the overall understanding of birds. From eBird, we downloaded all recorded observations of birds within a 5 kilometer radius of Corhaven in Quickburg, VA within the last 10 years. Evelyn's code determined when each bird species tended to be observed in each season of the Christian liturgical calendar. Kevin's code pulled all of this together into this book.
+Evelyn came up with the idea for this field guide after encountering difficulties using a field guide as a novice birder. What if field guides could be more localized? Evelyn and Kevin, both data scientists, discussed how to bring this idea to light. We collaborated on writing code to query `eBird.org`, a "citizen science" website where birders can report their sightings and contribute to the overall understanding of birds. From eBird, we downloaded all recorded observations of birds within a 5 kilometer radius of Corhaven in Quicksburg, VA within the last 10 years. Evelyn's code determined when each bird species tended to be observed in each season of the Christian liturgical calendar. Kevin's code pulled all of this together into this book.
 
 We contributed the structure, reflections, and code to create this guide, but we did not produce any of the bird descriptions or photos. All such content comes from various sources including Cornell University's `eBird.org` and National Geographic. Birding, like Christianity, has a rich tradition built on contributions and perspectives from those who have gone before. While innovation can be useful, it must be informed by the good work that others have toiled to produce. *-e*
 
@@ -121,7 +121,7 @@ We hope that organizing the guide in this way will help you connect the birds yo
 
 ```{r echo=FALSE, results='asis'}
 # Templates for sections
-season_template <- "## %s {data-short-title=''}
+season_template <- "## %s 
 
 _________________
 
