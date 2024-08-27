@@ -10,10 +10,36 @@ library(tibble)
 
 # Parameters
 nRecent = 11 # Include observations from nRecent last years
+yearMax = 2023 # last full year of observations
+yearMin = yearMax - nRecent
 distance_from = 5 # Maximum distance of observation from point of interest (in km)
 
-# File name to read
-birdFile = "corhaven"
+# subregion name to read
+locSubregion = c("US-VA-171", "US-VA-003")
+
+
+#TODO read in file of locSubregion(s)
+# make loop. for each locSubregion, read in, filter year limits
+i = 1
+df = NULL
+for (i in 1:length(locSubregion)) {
+ 
+  df_individual = read.csv(file = )
+   
+}
+  
+
+
+# now filter for birds showing up only within N km of the specified coordinates
+loc_fin = loc_fin %>%
+  group_by(id) %>%
+  mutate(
+    dist_km = geosphere::distm(x = c(locLng,locLat), y = c(lng,lat), fun = distHaversine)) %>%
+  ungroup() %>%
+  mutate(dist_km = as.numeric(dist_km/1000),
+         within5km = ifelse(dist_km<=distance_from, 1, 0)) %>%
+  filter(within5km == 1)
+
 
 # Order of seasons
 seasonOrder = c("Advent",
