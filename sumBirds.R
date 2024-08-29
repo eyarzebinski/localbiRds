@@ -17,6 +17,8 @@ distance_from = 5 # Maximum distance of observation from point of interest (in k
 # subregion name to read
 locSubregion = c("US-VA-171", "US-VA-003")
 
+# allow observations outside ebird
+non_ebird_observations = FALSE
 
 #TODO read in file of locSubregion(s)
 # make loop. for each locSubregion, read in, filter year limits
@@ -24,7 +26,7 @@ i = 1
 df = NULL
 for (i in 1:length(locSubregion)) {
  
-  df_individual = read.csv(file = )
+  df_individual = read.csv(file = paste0(locSubregion[i],"_",yearMin,"_",yearMax,".csv"))
    
 }
   
@@ -55,8 +57,12 @@ birds = read_csv(paste0(birdFile,".csv"))
 
 # File containing our own observations that aren't included in eBird
 # Pull only species codes
+if(non_ebird_observations == TRUE) {
 seenAtLocation = read_csv(paste0(birdFile,"Obs.csv")) %>%
   pull(speciesCode)
+} else {
+  "Non-ebird observations not indicated."
+}
 
 # File containing bird families for species
 birdFamily = read_csv("birdFamily.csv") %>%
@@ -160,9 +166,16 @@ typical_birds_year = unique_birds_year %>%
                                  mean_years > nRecent ~1, # the average observed each year is greater than nRecent
                                  mean_years < 1~0, # the average observed each year is not less than 1 bird per year
                                  unique_birds_year[,which(colnames(unique_birds_year) %in% max(recentYears))]/grandTotal >= .8~1, # more than 80% of years as defined by nRecent have observations
-                                 TRUE~0)) %>%
-  filter(typical_bird == 1 | speciesCode %in% seenAtLocation) # OR ALSO we personally observed the bird while on site at corhaven
+                                 TRUE~0))
 
+if(non_ebird_observations == TRUE) {
+  typical_birds_year = typical_birds_year %>%
+    filter(typical_bird == 1 | speciesCode %in% seenAtLocation) # OR ALSO we personally observed the bird while on site at corhaven
+} else {
+  typical_birds_year = typical_birds_year %>%
+    filter(typical_bird == 1) 
+}
+  
 # make a list of the typical birds for later lookup
 typical_birds_name = typical_birds_year %>%
   pull(comName)
