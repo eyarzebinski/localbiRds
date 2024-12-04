@@ -4,13 +4,12 @@
 # set up env
 library(geosphere)
 library(tidyverse)
-library(geosphere)
 library(rebird)
 
 # # check subregions if needed
 # checkSubregions = ebirdsubregionlist("country") # find all country-level regions
 # checkSubregions = ebirdsubregionlist("subnational1","US") # find all subregions in a country
-# checkSubregions = ebirdsubregionlist("subnational2","US-VA") # find all 2nd level subregions in a country (state/region level)
+# checkSubregions = ebirdsubregionlist("subnational2","US-MD") # find all 2nd level subregions in a country (state/region level)
 
 
 # set date range to grab data from ebird

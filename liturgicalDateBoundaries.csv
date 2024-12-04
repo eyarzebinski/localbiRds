@@ -1,89 +1,113 @@
-﻿year,date,liturgicalSeason,liturgicalSeason_collapsed,liturgicalSeason_final
-2011,1/6/11,Epiphany,Epiphany,Epiphany
-2011,12/25/11,Christmas,Christmas,Christmas
-2011,3/9/11,Ash Wednesday,Lent,Lent
-2011,4/24/11,Easter,Easter,Easter
-2011,6/2/11,Ascension Day,Ordinary Time,Ordinary Time (early)
-2011,6/12/11,Pentecost,Ordinary Time,Ordinary Time (early)
-2011,8/29/11,,Ordinary Time,Ordinary Time (late)
-2011,11/27/11,Advent,Advent,Advent
-2012,1/6/12,Epiphany,Epiphany,Epiphany
-2012,12/25/12,Christmas,Christmas,Christmas
-2012,2/21/12,Ash Wednesday,Lent,Lent
-2012,4/8/12,Easter,Easter,Easter
-2012,5/17/12,Ascension Day,Ordinary Time,Ordinary Time (early)
-2012,5/27/12,Pentecost,Ordinary Time,Ordinary Time (early)
-2012,8/24/12,,Ordinary Time,Ordinary Time (late)
-2012,12/2/12,Advent,Advent,Advent
-2013,1/6/13,Epiphany,Epiphany,Epiphany
-2013,12/25/13,Christmas,Christmas,Christmas
-2013,2/13/13,Ash Wednesday,Lent,Lent
-2013,3/31/13,Easter,Easter,Easter
-2013,5/9/13,Ascension Day,Ordinary Time,Ordinary Time (early)
-2013,5/19/13,Pentecost,Ordinary Time,Ordinary Time (early)
-2013,8/20/13,,Ordinary Time,Ordinary Time (late)
-2013,12/1/13,Advent,Advent,Advent
-2014,1/6/14,Epiphany,Epiphany,Epiphany
-2014,12/25/14,Christmas,Christmas,Christmas
-2014,3/5/14,Ash Wednesday,Lent,Lent
-2014,4/20/14,Easter,Easter,Easter
-2014,5/29/14,Ascension Day,Ordinary Time,Ordinary Time (early)
-2014,6/8/14,Pentecost,Ordinary Time,Ordinary Time (early)
-2014,8/29/14,,Ordinary Time,Ordinary Time (late)
-2014,11/30/14,Advent,Advent,Advent
-2015,1/6/15,Epiphany,Epiphany,Epiphany
-2015,12/25/15,Christmas,Christmas,Christmas
-2015,2/18/15,Ash Wednesday,Lent,Lent
-2015,4/5/15,Easter,Easter,Easter
-2015,5/14/15,Ascension Day,Ordinary Time,Ordinary Time (early)
-2015,5/24/15,Pentecost,Ordinary Time,Ordinary Time (early)
-2015,8/21/15,,Ordinary Time,Ordinary Time (late)
-2015,11/29/15,Advent,Advent,Advent
-2016,1/6/16,Epiphany,Epiphany,Epiphany
-2016,12/25/16,Christmas,Christmas,Christmas
-2016,2/9/16,Ash Wednesday,Lent,Lent
-2016,3/27/16,Easter,Easter,Easter
-2016,5/5/16,Ascension Day,Ordinary Time,Ordinary Time (early)
-2016,5/15/16,Pentecost,Ordinary Time,Ordinary Time (early)
-2016,8/16/16,,Ordinary Time,Ordinary Time (late)
-2016,11/27/16,Advent,Advent,Advent
-2017,1/6/17,Epiphany,Epiphany,Epiphany
-2017,12/25/17,Christmas,Christmas,Christmas
-2017,3/1/17,Ash Wednesday,Lent,Lent
-2017,4/16/17,Easter,Easter,Easter
-2017,5/25/17,Ascension Day,Ordinary Time,Ordinary Time (early)
-2017,6/4/17,Pentecost,Ordinary Time,Ordinary Time (early)
-2017,8/29/17,,Ordinary Time,Ordinary Time (late)
-2017,12/3/17,Advent,Advent,Advent
-2018,1/6/18,Epiphany,Epiphany,Epiphany
-2018,12/25/18,Christmas,Christmas,Christmas
-2018,2/14/18,Ash Wednesday,Lent,Lent
-2018,4/1/18,Easter,Easter,Easter
-2018,5/10/18,Ascension Day,Ordinary Time,Ordinary Time (early)
-2018,5/20/18,Pentecost,Ordinary Time,Ordinary Time (early)
-2018,8/21/18,,Ordinary Time,Ordinary Time (late)
-2018,12/2/18,Advent,Advent,Advent
-2019,1/6/19,Epiphany,Epiphany,Epiphany
-2019,12/25/19,Christmas,Christmas,Christmas
-2019,3/6/19,Ash Wednesday,Lent,Lent
-2019,4/21/19,Easter,Easter,Easter
-2019,5/30/19,Ascension Day,Ordinary Time,Ordinary Time (early)
-2019,6/9/19,Pentecost,Ordinary Time,Ordinary Time (early)
-2019,8/30/19,,Ordinary Time,Ordinary Time (late)
-2019,12/1/19,Advent,Advent,Advent
-2020,1/6/20,Epiphany,Epiphany,Epiphany
-2020,12/25/20,Christmas,Christmas,Christmas
-2020,2/25/20,Ash Wednesday,Lent,Lent
-2020,4/12/20,Easter,Easter,Easter
-2020,5/21/20,Ascension Day,Ordinary Time,Ordinary Time (early)
-2020,5/31/20,Pentecost,Ordinary Time,Ordinary Time (early)
-2020,8/25/20,,Ordinary Time,Ordinary Time (late)
-2020,11/29/20,Advent,Advent,Advent
-2021,1/6/21,Epiphany,Epiphany,Epiphany
-2021,12/25/21,Christmas,Christmas,Christmas
-2021,2/17/21,Ash Wednesday,Lent,Lent
-2021,4/4/21,Easter,Easter,Easter
-2021,5/13/21,Ascension Day,Ordinary Time,Ordinary Time (early)
-2021,5/23/21,Pentecost,Ordinary Time,Ordinary Time (early)
-2021,8/20/21,,Ordinary Time,Ordinary Time (late)
-2021,11/28/21,Advent,Advent,Advent
+﻿year,date,liturgicalSeason,liturgicalSeason_collapsed,liturgicalSeason_final,,,
+2011,1/6/11,Epiphany,Epiphany,Epiphany,,,
+2011,12/25/11,Christmas,Christmas,Christmas,,,
+2011,3/9/11,Ash Wednesday,Lent,Lent,,,
+2011,4/24/11,Easter,Easter,Easter,,,
+2011,6/2/11,Ascension Day,Ordinary Time,Ordinary Time (early),,,
+2011,6/12/11,Pentecost,Ordinary Time,Ordinary Time (early),,,
+2011,8/29/11,,Ordinary Time,Ordinary Time (late),,,
+2011,11/27/11,Advent,Advent,Advent,,,
+2012,1/6/12,Epiphany,Epiphany,Epiphany,,,
+2012,12/25/12,Christmas,Christmas,Christmas,,,
+2012,2/21/12,Ash Wednesday,Lent,Lent,,,
+2012,4/8/12,Easter,Easter,Easter,,,
+2012,5/17/12,Ascension Day,Ordinary Time,Ordinary Time (early),,,
+2012,5/27/12,Pentecost,Ordinary Time,Ordinary Time (early),,,
+2012,8/24/12,,Ordinary Time,Ordinary Time (late),,,
+2012,12/2/12,Advent,Advent,Advent,,,
+2013,1/6/13,Epiphany,Epiphany,Epiphany,,,
+2013,12/25/13,Christmas,Christmas,Christmas,,,
+2013,2/13/13,Ash Wednesday,Lent,Lent,,,
+2013,3/31/13,Easter,Easter,Easter,,,
+2013,5/9/13,Ascension Day,Ordinary Time,Ordinary Time (early),,,
+2013,5/19/13,Pentecost,Ordinary Time,Ordinary Time (early),,,
+2013,8/20/13,,Ordinary Time,Ordinary Time (late),,,
+2013,12/1/13,Advent,Advent,Advent,,,
+2014,1/6/14,Epiphany,Epiphany,Epiphany,,,
+2014,12/25/14,Christmas,Christmas,Christmas,,,
+2014,3/5/14,Ash Wednesday,Lent,Lent,,,
+2014,4/20/14,Easter,Easter,Easter,,,
+2014,5/29/14,Ascension Day,Ordinary Time,Ordinary Time (early),,,
+2014,6/8/14,Pentecost,Ordinary Time,Ordinary Time (early),,,
+2014,8/29/14,,Ordinary Time,Ordinary Time (late),,,
+2014,11/30/14,Advent,Advent,Advent,,,
+2015,1/6/15,Epiphany,Epiphany,Epiphany,,,
+2015,12/25/15,Christmas,Christmas,Christmas,,,
+2015,2/18/15,Ash Wednesday,Lent,Lent,,,
+2015,4/5/15,Easter,Easter,Easter,,,
+2015,5/14/15,Ascension Day,Ordinary Time,Ordinary Time (early),,,
+2015,5/24/15,Pentecost,Ordinary Time,Ordinary Time (early),,,
+2015,8/21/15,,Ordinary Time,Ordinary Time (late),,,
+2015,11/29/15,Advent,Advent,Advent,,,
+2016,1/6/16,Epiphany,Epiphany,Epiphany,,,
+2016,12/25/16,Christmas,Christmas,Christmas,,,
+2016,2/9/16,Ash Wednesday,Lent,Lent,,,
+2016,3/27/16,Easter,Easter,Easter,,,
+2016,5/5/16,Ascension Day,Ordinary Time,Ordinary Time (early),,,
+2016,5/15/16,Pentecost,Ordinary Time,Ordinary Time (early),,,
+2016,8/16/16,,Ordinary Time,Ordinary Time (late),,,
+2016,11/27/16,Advent,Advent,Advent,,,
+2017,1/6/17,Epiphany,Epiphany,Epiphany,,,
+2017,12/25/17,Christmas,Christmas,Christmas,,,
+2017,3/1/17,Ash Wednesday,Lent,Lent,,,
+2017,4/16/17,Easter,Easter,Easter,,,
+2017,5/25/17,Ascension Day,Ordinary Time,Ordinary Time (early),,,
+2017,6/4/17,Pentecost,Ordinary Time,Ordinary Time (early),,,
+2017,8/29/17,,Ordinary Time,Ordinary Time (late),,,
+2017,12/3/17,Advent,Advent,Advent,,,
+2018,1/6/18,Epiphany,Epiphany,Epiphany,,,
+2018,12/25/18,Christmas,Christmas,Christmas,,,
+2018,2/14/18,Ash Wednesday,Lent,Lent,,,
+2018,4/1/18,Easter,Easter,Easter,,,
+2018,5/10/18,Ascension Day,Ordinary Time,Ordinary Time (early),,,
+2018,5/20/18,Pentecost,Ordinary Time,Ordinary Time (early),,,
+2018,8/21/18,,Ordinary Time,Ordinary Time (late),,,
+2018,12/2/18,Advent,Advent,Advent,,,
+2019,1/6/19,Epiphany,Epiphany,Epiphany,,,
+2019,12/25/19,Christmas,Christmas,Christmas,,,
+2019,3/6/19,Ash Wednesday,Lent,Lent,,,
+2019,4/21/19,Easter,Easter,Easter,,,
+2019,5/30/19,Ascension Day,Ordinary Time,Ordinary Time (early),,,
+2019,6/9/19,Pentecost,Ordinary Time,Ordinary Time (early),,,
+2019,8/30/19,,Ordinary Time,Ordinary Time (late),,,
+2019,12/1/19,Advent,Advent,Advent,,,
+2020,1/6/20,Epiphany,Epiphany,Epiphany,,,
+2020,12/25/20,Christmas,Christmas,Christmas,,,
+2020,2/25/20,Ash Wednesday,Lent,Lent,,,
+2020,4/12/20,Easter,Easter,Easter,,,
+2020,5/21/20,Ascension Day,Ordinary Time,Ordinary Time (early),,,
+2020,5/31/20,Pentecost,Ordinary Time,Ordinary Time (early),,,
+2020,8/25/20,,Ordinary Time,Ordinary Time (late),,,
+2020,11/29/20,Advent,Advent,Advent,,,
+2021,1/6/21,Epiphany,Epiphany,Epiphany,,,
+2021,12/25/21,Christmas,Christmas,Christmas,,,
+2021,2/17/21,Ash Wednesday,Lent,Lent,,,
+2021,4/4/21,Easter,Easter,Easter,,,
+2021,5/13/21,Ascension Day,Ordinary Time,Ordinary Time (early),,,
+2021,5/23/21,Pentecost,Ordinary Time,Ordinary Time (early),,,
+2021,8/20/21,,Ordinary Time,Ordinary Time (late),,,
+2021,11/28/21,Advent,Advent,Advent,,,
+2022,1/6/22,Epiphany,Epiphany,Epiphany,,,
+2022,12/25/22,Christmas,Christmas,Christmas,,,
+2022,3/2/22,Ash Wednesday,Lent,Lent,,,
+2022,4/17/22,Easter,Easter,Easter,,,
+2022,5/26/22,Ascension Day,Ordinary Time,Ordinary Time (early),,,
+2022,6/5/22,Pentecost,Ordinary Time,Ordinary Time (early),,,
+2022,8/26/22,,Ordinary Time,Ordinary Time (late),,,
+2022,11/27/22,Advent,Advent,Advent,,,
+2023,1/6/23,Epiphany,Epiphany,Epiphany,,,
+2023,12/25/23,Christmas,Christmas,Christmas,,,
+2023,2/22/23,Ash Wednesday,Lent,Lent,,,
+2023,4/9/23,Easter,Easter,Easter,,,
+2023,5/18/23,Ascension Day,Ordinary Time,Ordinary Time (early),,,
+2023,5/28/23,Pentecost,Ordinary Time,Ordinary Time (early),,,
+2023,8/25/23,,Ordinary Time,Ordinary Time (late),,,
+2023,12/3/23,Advent,Advent,Advent,,,
+2024,1/6/24,Epiphany,Epiphany,Epiphany,,,
+2024,12/25/24,Christmas,Christmas,Christmas,,,
+2024,2/14/24,Ash Wednesday,Lent,Lent,,,
+2024,3/31/24,Easter,Easter,Easter,,,
+2024,5/9/24,Ascension Day,Ordinary Time,Ordinary Time (early),,,
+2024,5/19/24,Pentecost,Ordinary Time,Ordinary Time (early),,,
+2024,8/20/24,,Ordinary Time,Ordinary Time (late),,,
+2024,12/1/24,Advent,Advent,Advent,,,

@@ -1,0 +1,29 @@
+/* Whole document:
+body{
+  font-size: 10pt;
+}
+*/
+
+
+/* The main header */
+h1 {
+  font-size: 20pt;
+}
+
+p {
+	font-size: 10pt;
+}
+
+/*margin: 0in 0in 0in 0in; 
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-right: 15px;
+  margin-left: 8px;
+}*/
+
+@page {
+  margin-top: .5in;
+  margin-bottom: .5in;
+  margin-left: .5in;
+  margin-right: .5in;
+}

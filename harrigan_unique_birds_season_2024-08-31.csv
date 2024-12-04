@@ -1,0 +1,66 @@
+birdFamily,comName,speciesCode,liturgicalSeason_final
+"Corvidae: Jays, Crows & Magpies",American Crow,amecro,Lent
+"Corvidae: Jays, Crows & Magpies",American Crow,amecro,Ordinary Time (early)
+"Fringillidae: Siskins, Crossbills & Allies",American Goldfinch,amegfi,Ordinary Time (early)
+Falconidae: Falcons,American Kestrel,amekes,Christmas
+Falconidae: Falcons,American Kestrel,amekes,Lent
+Falconidae: Falcons,American Kestrel,amekes,Ordinary Time (early)
+Turdidae: Thrushes,American Robin,amerob,Lent
+Hirundinidae: Martins and Swallows,Barn Swallow,barswa,Ordinary Time (early)
+"Corvidae: Jays, Crows & Magpies",Blue Jay,blujay,Ordinary Time (late)
+"Icteridae: Blackbirds, Meadowlarks & Orioles",Bobolink,boboli,Easter
+"Icteridae: Blackbirds, Meadowlarks & Orioles",Bobolink,boboli,Ordinary Time (early)
+"Icteridae: Blackbirds, Meadowlarks & Orioles",Brown-headed Cowbird,bnhcow,Ordinary Time (late)
+"Anatidae: Swans, Geese & Ducks",Canada Goose,cangoo,Ordinary Time (late)
+Passerellidae: New World Sparrows and Towhees,Chipping Sparrow,chispa,Ordinary Time (early)
+Passerellidae: New World Sparrows and Towhees,Chipping Sparrow,chispa,Ordinary Time (late)
+"Icteridae: Blackbirds, Meadowlarks & Orioles",Common Grackle,comgra,Lent
+Passerellidae: New World Sparrows and Towhees,Dark-eyed Junco,daejun,Epiphany
+Passerellidae: New World Sparrows and Towhees,Dark-eyed Junco,daejun,Lent
+Turdidae: Thrushes,Eastern Bluebird,easblu,Ordinary Time (early)
+Tyrannidae: Tyrant Flycatchers,Eastern Kingbird,easkin,Ordinary Time (early)
+"Icteridae: Blackbirds, Meadowlarks & Orioles",Eastern Meadowlark,easmea,Easter
+"Icteridae: Blackbirds, Meadowlarks & Orioles",Eastern Meadowlark,easmea,Ordinary Time (early)
+Tyrannidae: Tyrant Flycatchers,Eastern Phoebe,easpho,Lent
+Sturnidae: Starlings,European Starling,eursta,Ordinary Time (late)
+"Corvidae: Jays, Crows & Magpies",Fish Crow,fiscro,Lent
+"Anatidae: Swans, Geese & Ducks",Gadwall,gadwal,Lent
+Passerellidae: New World Sparrows and Towhees,Grasshopper Sparrow,graspa,Ordinary Time (early)
+"Mimidae: Catbirds, Mockingbirds & Thrashers",Gray Catbird,grycat,Easter
+"Mimidae: Catbirds, Mockingbirds & Thrashers",Gray Catbird,grycat,Ordinary Time (early)
+"Ardeidae: Bitterns, Herons & Egrets",Great Blue Heron,grbher3,Ordinary Time (early)
+"Ardeidae: Bitterns, Herons & Egrets",Great Blue Heron,grbher3,Ordinary Time (late)
+"Ardeidae: Bitterns, Herons & Egrets",Great Egret,greegr,Ordinary Time (early)
+"Anatidae: Swans, Geese & Ducks",Green-winged Teal,gnwtea,Ordinary Time (late)
+Alaudidae: Larks,Horned Lark,horlar,Lent
+"Fringillidae: Siskins, Crossbills & Allies",House Finch,houfin,Advent
+"Fringillidae: Siskins, Crossbills & Allies",House Finch,houfin,Ordinary Time (early)
+Passeridae: Old World Sparrows,House Sparrow,houspa,Ordinary Time (early)
+Troglodytidae: Wrens,House Wren,houwre,Ordinary Time (early)
+"Cardinalidae: Tanagers, Cardinals, Grosbeaks & Dickcissels",Indigo Bunting,indbun,Ordinary Time (early)
+"Cardinalidae: Tanagers, Cardinals, Grosbeaks & Dickcissels",Indigo Bunting,indbun,Ordinary Time (late)
+Charadriidae: Plovers,Killdeer,killde,Ordinary Time (early)
+"Anatidae: Swans, Geese & Ducks",Mallard,mallar3,Ordinary Time (early)
+Columbidae: Pigeons and Doves,Mourning Dove,moudov,Ordinary Time (early)
+"Cardinalidae: Tanagers, Cardinals, Grosbeaks & Dickcissels",Northern Cardinal,norcar,Ordinary Time (early)
+"Mimidae: Catbirds, Mockingbirds & Thrashers",Northern Mockingbird,normoc,Ordinary Time (early)
+Hirundinidae: Martins and Swallows,Northern Rough-winged Swallow,nrwswa,Ordinary Time (early)
+Picidae: Woodpeckers,Red-bellied Woodpecker,rebwoo,Easter
+Picidae: Woodpeckers,Red-headed Woodpecker,rehwoo,Easter
+Picidae: Woodpeckers,Red-headed Woodpecker,rehwoo,Ordinary Time (early)
+"Accipitridae: Kites, Hawks & Eagles",Red-tailed Hawk,rethaw,Christmas
+"Accipitridae: Kites, Hawks & Eagles",Red-tailed Hawk,rethaw,Ordinary Time (early)
+"Icteridae: Blackbirds, Meadowlarks & Orioles",Red-winged Blackbird,rewbla,Ordinary Time (late)
+Columbidae: Pigeons and Doves,Rock Pigeon,rocpig,Epiphany
+Columbidae: Pigeons and Doves,Rock Pigeon,rocpig,Lent
+Passerellidae: New World Sparrows and Towhees,Savannah Sparrow,savspa,Easter
+Passerellidae: New World Sparrows and Towhees,Savannah Sparrow,savspa,Ordinary Time (early)
+Scolopacidae: Sandpipers,Solitary Sandpiper,solsan,Ordinary Time (early)
+Passerellidae: New World Sparrows and Towhees,Song Sparrow,sonspa,Easter
+Passerellidae: New World Sparrows and Towhees,Song Sparrow,sonspa,Ordinary Time (early)
+Hirundinidae: Martins and Swallows,Tree Swallow,treswa,Ordinary Time (early)
+Hirundinidae: Martins and Swallows,Tree Swallow,treswa,Ordinary Time (late)
+Cathartidae: New World Vultures,Turkey Vulture,turvul,Ordinary Time (early)
+Passerellidae: New World Sparrows and Towhees,White-crowned Sparrow,whcspa,Epiphany
+Passerellidae: New World Sparrows and Towhees,White-throated Sparrow,whtspa,Lent
+Scolopacidae: Sandpipers,Wilson's Snipe,wilsni1,Lent

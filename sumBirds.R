@@ -3,19 +3,27 @@ library(lubridate)
 library(tidyverse)
 library(janitor)
 library(tibble)
+library(geosphere)
+
 
 # TODO
 # consider if any additional criteria for typical birds is missing
 # autojoin liturgical season date boundaries (see @kevin below)
 
 # Parameters
-nRecent = 11 # Include observations from nRecent last years
+nRecent = 10 # Include observations from nRecent last years
 yearMax = 2023 # last full year of observations
-yearMin = yearMax - nRecent
-distance_from = 5 # Maximum distance of observation from point of interest (in km)
+yearMin = yearMax - nRecent + 1
+locName = "harrigan"
+locLat = 38.79074058395282
+locLng = -78.62917713210612
+distance_from = 3 # Maximum distance of observation from point of interest (in km)
+
+# visit https://www.calcmaps.com/map-radius/ and grab screenshot of distance_from overlaid
+# lat/lng precision: https://gis.stackexchange.com/questions/8650/measuring-accuracy-of-latitude-and-longitude
 
 # subregion name to read
-locSubregion = c("US-VA-171", "US-VA-003")
+locSubregion = c("US-VA-171")
 
 # allow observations outside ebird
 non_ebird_observations = FALSE
@@ -23,24 +31,26 @@ non_ebird_observations = FALSE
 #TODO read in file of locSubregion(s)
 # make loop. for each locSubregion, read in, filter year limits
 i = 1
-df = NULL
+loc_fin = NULL
 for (i in 1:length(locSubregion)) {
  
-  df_individual = read.csv(file = paste0(locSubregion[i],"_",yearMin,"_",yearMax,".csv"))
-   
+  df_individual = read.csv(list.files("~/Downloads/bird database 2/",
+                                             pattern = locSubregion[i],
+                                      full.names = T))
+  
+  loc_fin = rbind(loc_fin,
+                  df_individual)
 }
   
 
-
 # now filter for birds showing up only within N km of the specified coordinates
 loc_fin = loc_fin %>%
-  group_by(id) %>%
-  mutate(
-    dist_km = geosphere::distm(x = c(locLng,locLat), y = c(lng,lat), fun = distHaversine)) %>%
+  rowwise() %>%
+  mutate(dist_km = geosphere::distm(x = c(locLng,locLat), y = c(lng,lat), fun = distHaversine)) %>%
   ungroup() %>%
   mutate(dist_km = as.numeric(dist_km/1000),
-         within5km = ifelse(dist_km<=distance_from, 1, 0)) %>%
-  filter(within5km == 1)
+         withinDist = ifelse(dist_km<=distance_from, 1, 0)) %>%
+  filter(withinDist == 1)
 
 
 # Order of seasons
@@ -52,8 +62,8 @@ seasonOrder = c("Advent",
                 "Ordinary Time (early)",
                 "Ordinary Time (late)")
 
-# File containing all observations from eBird
-birds = read_csv(paste0(birdFile,".csv"))
+# # File containing all observations from eBird
+# birds = read_csv(paste0(birdFile,".csv"))
 
 # File containing our own observations that aren't included in eBird
 # Pull only species codes
@@ -61,16 +71,16 @@ if(non_ebird_observations == TRUE) {
 seenAtLocation = read_csv(paste0(birdFile,"Obs.csv")) %>%
   pull(speciesCode)
 } else {
-  "Non-ebird observations not indicated."
+  message("Non-ebird observations not indicated.")
 }
 
 # File containing bird families for species
-birdFamily = read_csv("birdFamily.csv") %>%
+birdFamily = read_csv("~/Documents/GitHub/localbiRds/birdFamily.csv") %>%
   select(comName, birdFamily)
 
 # File containing liturgical seasons
 # Clean date to get range
-liturgicalSeasonLookup = read_csv("liturgicalDateBoundaries.csv") %>%
+liturgicalSeasonLookup = read_csv("~/Documents/GitHub/localbiRds/liturgicalDateBoundaries.csv") %>%
   mutate(season_start = lubridate::mdy(date),
          liturgicalSeason_final = factor(liturgicalSeason_final, levels = seasonOrder)) %>%
   group_by(year, liturgicalSeason_final) %>%
@@ -80,21 +90,37 @@ liturgicalSeasonLookup = read_csv("liturgicalDateBoundaries.csv") %>%
   mutate(season_end = lead(season_start) - 1) %>%
   mutate(liturgicalSeason_final = as.character(liturgicalSeason_final))
 
-# Last season (Christmas 2021) ends before Epiphany on Jan 6, 2022
-liturgicalSeasonLookup$season_end[nrow(liturgicalSeasonLookup)] = ymd("2022-01-06") - 1
+# Set the end date of the christmas season for the latest year in the liturgicalDateBoundaries file
+liturgicalSeasonLookup$season_end[nrow(liturgicalSeasonLookup)] = ymd(paste0(liturgicalSeasonLookup$year[nrow(liturgicalSeasonLookup)]+1,"-01-06"))-1
 
 # Make start and end of season into interval
 liturgicalSeasonLookup = liturgicalSeasonLookup %>%
   mutate(season = interval(season_start, season_end))
 
 # Filter the hyperlocal birds and make pretty dates
-birds_df = birds %>%
-  dplyr::filter(dist_km <= distance_from,
-                !is.na(howMany)) %>%
-  mutate(obsDt = lubridate::ymd(as.Date(obsDt)),
+birds_df = loc_fin %>%
+  dplyr::filter(dist_km <= distance_from) %>%
+  dplyr::filter(!is.na(howMany)) %>%
+  dplyr::filter(!is.na(obsDt)) %>%
+  mutate(obsDt = lubridate::ymd(as.Date(obsDt,format = "%m/%d/%y")),
          obsMonth = month(obsDt),
          obsYear = year(obsDt)) %>%
+  dplyr::filter(obsYear >= yearMin &
+                  obsYear <= yearMax) %>%
   select(-month)
+
+
+# pull out the locations of each checklist
+locations = birds_df %>%
+  mutate(lat3 = round(lat,digits = 3),
+         lng3 = round(lng,digits = 3))
+
+locations_summary = locations %>%
+  group_by(lat3,
+           lng3) %>%
+  dplyr::summarize(n = n(),
+                   n_locations = n_distinct(locId),
+                   n_users = n_distinct(userDisplayName))
 
 # join in the bird family information
 birds_df = birds_df %>%
@@ -160,13 +186,15 @@ typical_birds_year = unique_birds_year %>%
                                                       which(colnames(unique_birds_year) %in% max(recentYears))] == 0, na.rm = T),
          mean_all = round(grandTotal/length(years),2),
          mean_years = rowMeans(unique_birds_year[,which(colnames(unique_birds_year) %in% min(recentYears)):
-                                               which(colnames(unique_birds_year) %in% max(recentYears))]),
-         typical_bird = case_when(grandTotal >= length(years)*2~1, # total birds observed anytime in N years is 2*N or more. So in a 10 year window, both scenarios count: 1) 20 birds in 1 year counts and 2) 2 birds each year for 10 years
+                                               which(colnames(unique_birds_year) %in% max(recentYears))])) %>%
+  mutate(typical_bird = case_when(grandTotal >= length(years)*2~1, # total birds observed anytime in N years is 2*N or more. So in a 10 year window, both scenarios count: 1) 20 birds in 1 year counts and 2) 2 birds each year for 10 years
                                  count_0/length(years) <= .2 | count_0_Nyears == 0~1,
                                  mean_years > nRecent ~1, # the average observed each year is greater than nRecent
                                  mean_years < 1~0, # the average observed each year is not less than 1 bird per year
                                  unique_birds_year[,which(colnames(unique_birds_year) %in% max(recentYears))]/grandTotal >= .8~1, # more than 80% of years as defined by nRecent have observations
-                                 TRUE~0))
+                                 TRUE~0)) %>%
+  select(typical_bird,
+         everything())
 
 if(non_ebird_observations == TRUE) {
   typical_birds_year = typical_birds_year %>%
@@ -219,19 +247,51 @@ typical_birds_name = typical_birds_year %>%
 #                 sort(colnames(.))) %>%
 #   ungroup()
 
-# find unique birds per month to calculate most common liturgical season
-unique_birds_month = birds_df %>%
+# find unique birds per season to calculate most common liturgical season
+#TODO fill in missing seasons if not reported
+#TODO average seen per season vs total reported
+#FIXME need to take years into account
+unique_birds_season_prep = birds_df %>%
   filter(comName %in% typical_birds_name) %>%
   #mutate(month = as.numeric(as.character(month))) %>%
   group_by(birdFamily,
            comName,
            speciesCode,
            liturgicalSeason_final) %>%
-  dplyr::summarize(totalBirds = sum(howMany)) %>%
-  mutate(grandTotal = sum(totalBirds),
-         pct = totalBirds / grandTotal,
-         pct_round = round(pct/.05)*.05, # Round percentage to nearest 5%
-         is_typical = (pct_round == max(pct_round))) %>% # is_typical if the rounded pct is the max for group
+  dplyr::summarize(totalBirds_season = sum(howMany),
+                   n_checklists = n_distinct(locId,userDisplayName,obsDt),
+                   n_years = n_distinct(obsYear)) %>%
+  ungroup() %>%
+  complete(comName,liturgicalSeason_final) %>% # ensure each bird species has a value for each season
+  group_by(comName) %>%
+  fill(birdFamily,.direction = "downup") %>%
+  fill(speciesCode, .direction = "downup") %>%
+  ungroup() %>%
+  replace_na(list(totalBirds_season = 0,
+                  n_checklists = 0,
+                  n_years = 0)) %>%
+  group_by(birdFamily,
+           comName,
+           speciesCode) %>%
+  mutate(sumTotal = sum(totalBirds_season),
+         meanTotal = mean(totalBirds_season),
+         sdTotal = sd(totalBirds_season),
+         sdMin = meanTotal-sdTotal,
+         sdMax = meanTotal+sdTotal,
+         higherThanSD = case_when(totalBirds_season > sdMax ~ 1,
+                                  TRUE ~ 0),
+         pct_sum = totalBirds_season/sumTotal) %>%
+  mutate(pct_mean = mean(pct_sum),
+         #pct_mean = mean(meanTotal)meanTotal / grandTotal,
+         #pct_stdev = stdev()
+         #pct_sum_years = totalBirds / grandTotal / nRecent,
+         #pct_mean_years = meanTotal / grandTotal / nRecent,
+         pct_round = round(pct_sum/.05)*.05, # Round percentage to nearest 5%
+         highest_pctRound = (pct_round == max(pct_round)), # flag highest percentis_typical if the rounded pct is the max for group
+         is_typical = case_when(higherThanSD == 1 | highest_pctRound == 1 ~ TRUE,
+                                TRUE ~ FALSE))
+  
+unique_birds_season = unique_birds_season_prep %>%
   filter(is_typical) %>%
   select(comName, speciesCode, liturgicalSeason_final) |> 
   ungroup() %>%
@@ -241,7 +301,8 @@ unique_birds_month = birds_df %>%
   distinct()
 
 # Write unique birds and their seasons
-write_csv(unique_birds_month, file = "unique_birds_season.csv")
+write_csv(unique_birds_season_prep, paste0("~/Documents/GitHub/localbiRds/",locName,"_unique_birds_season_prep_",Sys.Date(),".csv"))
+write_csv(unique_birds_season, paste0("~/Documents/GitHub/localbiRds/",locName,"_unique_birds_season_",Sys.Date(),".csv"))
 
 # # check that all birds have at least one typical season set
 # ifelse(n_distinct(unique_birds_month$comName) != n_distinct(unique_birds_month$comName[unique_birds_month$typicalSeason!="none"]),

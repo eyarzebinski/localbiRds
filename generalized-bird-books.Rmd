@@ -1,0 +1,216 @@
+---
+title: "The Birds of South Middle Rd"
+author: "Evelyn Yarzebinski & Kevin Soo"
+output:
+  pagedown::html_paged:
+    toc: true
+    toc_title: false
+    number_sections: false
+    chapter_name: false
+    #extra_css: [override.css]
+    css: [default, default-page, default-fonts, override.css]
+
+---
+
+```{r message=FALSE, echo=FALSE}
+# Load libraries
+library(tidyverse)
+library(glue)
+library(pagedown)
+
+# parameters
+nRecent = 10 # Include observations from nRecent last years
+yearMax = 2023 # last full year of observations
+yearMin = yearMax - nRecent + 1
+locName = "harrigan"
+locLat = "xx"
+locLng = "xx"
+distance_from = 3 # Maximum distance of observation from point of interest (in km)
+
+# Load data
+df <- read_csv("~/Documents/GitHub/localbiRds/harrigan_unique_birds_season_2024-08-31.csv",
+               show_col_types = F) |>
+  mutate(typicalSeason = as_factor(liturgicalSeason_final) |> 
+           fct_relevel("Advent", "Christmas", "Epiphany", "Lent", "Easter", "Ordinary Time (early)", "Ordinary Time (late)")) |> 
+  select(birdFamily, comName, speciesCode, typicalSeason)
+
+ebird <- read_csv("ebird_data.csv",
+                  show_col_type = F) |> 
+  mutate(photo_path = glue("photos/{speciesCode}.png"))
+
+season <- read_csv("generalized-season-reflections.csv",
+                   show_col_types = F) |> 
+  mutate(typicalSeason = as_factor(typicalSeason) |> 
+           fct_relevel("Advent", "Christmas", "Epiphany", "Lent", "Easter", "Ordinary Time (early)", "Ordinary Time (late)"))
+
+# Join dataframes
+df <- df |> 
+  left_join(ebird) 
+```
+
+##  {.unlisted}
+
+\newpage
+
+To our boys. 
+
+May your early, wide-eyed wonder at the outdoors grow to include birds one day. *-e*
+
+You bring us more joy than a thousand warblers during spring migration. *-k*
+
+
+## Preface {.page-break-before}
+
+We were privileged to participate in the 2021 Coracle Fellowship cohort. This field guide you are reading is a generalized version of our final project, a bird guide for Corhaven in Quicksburg, VA. It was borne out of the love, care, and reflection stimulated by that community.
+
+I came up with the idea for this field guide after encountering difficulties using a field guide as a novice birder. I wondered: What if field guides could be more localized? Kevin and I wrote code to query `eBird.org`, a "citizen science" website where birders can report their sightings and contribute to the overall understanding of birds. From eBird, we downloaded all recorded observations of birds within a 5 kilometer radius of Corhaven in Quicksburg, VA within the last 10 years. My code determined when each bird species tended to be observed in each season of the Christian liturgical calendar. Kevin's code pulled all of that together into this book.
+
+We contributed the structure, reflections, and code to create this guide, but we did not produce any of the bird descriptions or photos. All such content comes including Cornell University's `eBird.org` and National Geographic. Birding, like Christianity, has a rich tradition built on contributions and perspectives from those who have gone before. While innovation can be useful, it must be informed by the good work that others have toiled to produce. *-e*
+
+# Part 1: On birding {.page-break-before}
+
+## Introduction {.page-break-before}
+
+It is no stretch to say that birding saved our lives. In early 2020, we were struggling through a season of personal darkness, which was compounded by being shut off from much of the outside world due to the Covid-19 pandemic. We spent many days watching the passage of time from the our dining room window, unable to see beyond those circumstances in which we failed to flourish. 
+
+It was around spring that we first started to notice the appearance (and then reappearance) of different kinds of birds. What we had thought of as "birds" before became to us distinct creatures. Different species became associated with different personalities, colors, and sounds. We bought a field guide to help us identify them, which transformed them in our eyes. They were *named*, they were *known*, and because they evoked in us a hint of the joy one feels when we realize someone has become familiar, we saw that they were *good*. 
+
+The birds drew us outside of our home and ourselves. They called to us and gave us a reason to look and venture outwards. They gave structure to our days and weeks as we learned of their rhythms. Finally they became, to our surprise, reminders of God's kindness and presence with us through the seasons. Like God, birds come in and out of our view, but they are always around.
+
+The significance of birds has a rich heritage within Christian tradition. Besides being mentioned and playing critical symbolic roles within the Bible, they have been used as symbols in Christian art for centuries. There were numerous stories in the early days of the church of its saints and mystics befriending birds. More recently, the late John Stott was a lover of birds, writing *The Birds Our Teachers: Biblical Lessons from a Lifelong Bird Watcher*, which can be found in the Corhaven library. Birds need not be linked to explicit Biblical references to reveal their theological significance. One of my favorite books, *Great Possessions: An Amish Farmer's Journal* by David Kline, contains reflections about farm life. The birds that pass through his family's farm are central characters: The agents of a God who sustains his creatures out of creative abundance. 
+
+To anyone with eyes to see and ears to hear, we believe birding has much to offer us in our spiritual formation. It cultivates a sense of wonder and love of creation. It forms good habits and virtues in those who give themselves to the practice. It has the potential to draw humans into deeper communion with the living God, who rules over much more than the birds, but certainly not less. *-k*
+
+## A note on Corhaven {.page-break-before}
+
+Coracle is a living and breathing community of people knitted together by the Spirit and the humble work of its stewards. Its people are joined by a shared desire for deep spiritual communion, which transcends church traditions and localities. Despite its transcendent quality, Coracle is also tied intimately to a physical space. If you are reading this at Corhaven, you will be familiar with how the veil between God's space and ours seems to be just a little bit thinner there. I suspect that through common use, consecration, and cultivation of the grounds and buildings of Corhaven, it has been molded into a shape that is well-suited to revealing God's presence. 
+
+Taking a walk around Corhaven, you will likely notice the chickens and guinea fowl patrolling the grounds (they are not included in this field guide). Look above on a sunny day, and you may see Turkey Vultures circling overhead. Venture through Corhaven's paths into the woods and you will likely hear birds calling and singing (though they may be hard to spot). Like human communities, birds are tied to physical space and time. Specifically, most of them are tied to certain spaces at certain times -- that is, they are seasonal. You can only really notice this if you try birding in the same place over time. 
+
+Quicksburg, VA is located close enough to migration pathways on the East coast to host a variety of birds. In addition, its setting among farmland, forests, and the Appalachian Mountains make it a welcoming habitat. Closer to Corhaven itself, the lush woods and Holman's Creek at the back of the grounds offer plenty of hiding and feeding spots for birds. All these factors make Corhaven a challenging but potentially rewarding place for birding. *-k*
+
+## Birding as virtue formation {.page-break-before}
+
+When asked about my hobbies, I am likely to launch into a discourse of why I love birds and the practice of identifying them. Whether the person asking the question has any interest in what I have to say is questionable. What is unquestionable, though, is that my answers flow naturally out of me because the practice of birding has fundamentally shaped the kind of person I am.
+
+Any practice, if embraced wholeheartedly over time, has the potential to shape its practitioners. In that respect, birding is not unique. With the exception of a lucky (or fanatical) minority, most of us partake in and are shaped by a diversity of practices. Human beings spend time birding, working, parenting, gardening, and so much more. Some of these practices form virtue in us, while others form vices (typically, each practice forms some combination of both). Most of this formation happens beneath the level of our conscious awareness, so it is worth reflecting from time to time on the kinds of people we are becoming as a result of our participation in a particular practice.
+
+Birding is the first proper hobby I've discovered as an adult. It had been awhile since I felt driven to learn anything and everything I could about a new domain, which brought me back to my younger years when I would experience the rush of unearthing and navigating the intricacies of a new activity (the last one was when I picked up rock climbing in college). I found that birding cultivated my capacity for childlike *awe* and *joy*. It taught me once again to be excited rather than cynical or skeptical towards something out in the world. It taught me that there is much in the world that is worth knowing.
+
+While birding evokes childlike wonder, it simultaneously cultivates more adult virtues like *conscientiousness* and *care*. It is certainly possible to identify and catalog birds in a mostly self-serving manner (e.g. to run up one's tally of observations), but even that relies on the generosity and care of others who make birding information and knowledge readily available. Birding is a shared practice and draws you into a community, and to be initiated into this community is to care about the effect one has on other birders, the environment, and of course, the birds. Because one can only begin birding in light of the generosity of others, the practice invites you to give to and care for others in turn.
+
+Because I am newer to birding and lack years of hard-earned knowledge that would allow identifying birds to come "naturally", I have had to acquire the basics of birding through intentional *discipline*, via repetition and practice. I read up on common species to look out for in new birding locations I visit. I track recent observations from birding websites (and a web-app Evelyn and I built) to decide where to go birding. I hone my bird photography skills through trial and error. I study my field guide to memorize subtle cues to help with identification. As with all virtues, the point of intentional disciplines is to make a certain way of being "second nature". There will come a day when all this comes naturally, but it will likely take years of treating birding as an intentional discipline.
+
+Finally, birding cultivates my ability to *love*. Birding assumes there are things outside of myself worth contemplating, and as I come to know them, I discover that they are not mere objects, but subjects with their own exterior and (I assume) interior lives. Love, the great theologians have argued, is a form of knowing. One cannot truly know something without loving it, and one cannot love something without truly knowing it. The surest way to learn to love birds is to know them, but you cannot truly know them without loving them. Birding cultivates a million different virtues, but the greatest of these is love. *-k*
+
+## Birding as part of the spiritual life {.page-break-before}
+
+At its core, birding is a practice by which we come to know birds as subjects and creatures. As subjects, birds are distinct from us. This may seem a trivial truth, but in a world that elevates self and autonomy, it is no small thing to be reminded that there are beings beyond ourselves with dynamic lives of their own. As creatures, birds are simultaneously part of the created order and distinct from each other. Thus, they reveal the world's (literal and figurative) diversity and color, which makes them worth knowing.
+
+What is the goal of the spiritual life if not to become better subjects and creatures within the created order and in relation to God our Creator? Our capacity to receive the practice of birding as a gift, if we embrace it, parallels and enhances our capacity to receive spiritual life. 
+
+Birds are warm-blooded animals constituting the class *Aves* (Latin for 'bird'). There are nearly 11,000 species of bird worldwide, and they all share many genetic, biological, and physiological characteristics. These are related in fascinating ways, but it would be a mistake to think birds are reducible to these physical characteristics alone. It is of course possible to view birds as mere configurations of physical characteristics, but all birders (and ornithologists) are drawn to them for their beauty and distinct personalities.
+
+Similarly, it is possible to view the world only as a complex system of physical, economic, and social forces. That is to view the world as *nature*, i.e. as mere matter. Those forces are certainly at play, but any Christian living the spiritual life knows how impoverished such a view is. The world is not mere nature, but *creation* charged with the presence of a Creator God who continues creating and interacting with the world. Although birding is about noticing what is there, it beckons us to see not just the birds, but beyond the birds themselves.
+
+One of my favorite aspects of birding is the seasonality of various birds. They come and go in predictable patterns. Many species of waterfowl show up near our home in Virginia in the winter. Songbirds show up in the spring. Birding invites us to stay and patiently await old friends, and gives us a sense of the passing of time. 
+
+The importance of time to the spiritual life should not surprise mature Christians. God brings Christians through different seasons of life. Every year, the Christian calendar draws us into the unfolding drama of God's people as we walk through Advent, Christmas, Epiphany, Lent, Easter, Pentecost, and Ordinary Time. Each season has its place in time and in the spiritual life, and it is sacrilegious to skip any one season to rush towards another. God appears to teach us different things in and through different seasons, and to expect otherwise would be as foolish as looking for warblers (seasonal migrants) in the middle of winter.
+
+Finally, birding forces us to acknowledge that we are ultimately recipients of a gift. We can, and indeed should, prepare and plan as best we can for any birding expedition. Learning the behaviors, habitats, and seasonality of different species will increase one's likelihood of encountering birds of interest. Having the right equipment and technique helps, too. But ultimately, nothing is guaranteed or owed to us. The birds will do as they please, and if they deign to appear, it should be received as grace. 
+
+So too with the spiritual life. We worship, pray, and study so that we might become more attuned to God's whispers and presence. God is always speaking and present, but our limitations as creatures mean we should always be listening and watching as if God could appear as a bird in a bush. *"The wind blows where it chooses, and you hear the sound of it, but you do not know where it comes from or where it goes"* (John 3:8). Likewise, the birds fly where they will, and you may hear their song, but you do not know where they come from or where they go. *-k*
+
+## A note on the guide {.page-break-before}
+
+Creating a comprehensive hyper-localized bird guide is a Sisyphean task: As soon as a new version is ready, there will be weather systems, climate change, or other environmental factors that influence the birds you may see in that area. You may not see the birds you expect to see, and you may even see birds you did not expect to see. Therefore, this guide was not designed to be authoritative. Your own mileage may vary.
+
+The more time we have spent as birders, the more we have associated different species with different times. As we see different birds come and go during the year, we are reminded of the passage of time and the rhythms of God's creation. We wanted to provide a resource that might help readers draw links between different birds and the seasons of the Church. This was easy enough, since the Church organizes time with the liturgical calendar. Our innovation in this guide is that we have organized entries for birds by the Christian liturgical season(s) in which they are most commonly observed.
+
+We have included the liturgical seasons of Advent, Christmas, Epiphany, Lent, Easter and Ordinary Time. While some Christian traditions may differ in the number and timing of liturgical seasons, we felt these were a reasonable, ecumenical representation of the Christian calendar. Note that single-day events such as Pentecost and Ascension are not included due to the difficulty of gathering sufficient bird data for a single day. Additionally, we have split Ordinary Time into *early* and *late* portions, because it is the longest season, and the common birds do vary between those halves of the season.
+
+We hope that organizing the guide in this way will help you connect the birds you observe to particular liturgical seasons. May the birds you see be friendly reminders of God's activity in the time and place you find yourself, and may they nudge you towards deeper wonder and awe for the one who created both the birds and the seasons. *-e*
+
+# Part 2: Field guide {.page-break-before}
+
+\newpage
+
+```{r echo=FALSE, results='asis'}
+# Templates for sections
+
+season_template <- "\n\n## %s 
+
+_________________
+
+%s 
+
+\\newpage
+"
+
+# putting this in the top of the page
+fam_template <- "### %s {.unlisted}\n"
+
+# the page layout
+# arguments are:
+# Bird name (title case)
+# Bird picture (40% width)
+# Bird description
+
+species_template <- 
+"#### %s {.unlisted}
+
+![](%s){width=40%%}
+
+%s
+
+\\newpage
+"
+
+# Render sections
+for (i in season$typicalSeason) {
+  
+  # Get current season
+  season_current <- i
+  
+  # Get birds in current season
+  birds_current <- df |> 
+    filter(typicalSeason == season_current)
+  
+  # Get families in this season
+  fams <- birds_current |> 
+    select(birdFamily) |> 
+    distinct()
+  
+  # Get season reflection
+  season_reflection <- season |> 
+    filter(typicalSeason == season_current) |> 
+    pull(reflection)
+  
+  # Print season section header
+  cat(sprintf(season_template, season_current, season_reflection))
+  
+  # For each family within the season, create a section
+  for (j in fams$birdFamily) {
+    
+    # Get current family
+    fam_current <- j
+    
+    # Print family section header
+    cat(sprintf(fam_template, fam_current))
+    
+    # Get birds within that family
+    birds_in_fam <- birds_current |> 
+      filter(birdFamily == fam_current)
+    
+    # For all species within family, print an entry
+    for (k in 1:nrow(birds_in_fam)) {
+      cat(sprintf(species_template,
+                  birds_in_fam$comName[k],
+                  birds_in_fam$photo_path[k],
+                  birds_in_fam$description[k]
+                  )
+          )
+      }
+  }
+}
+```
