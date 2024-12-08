@@ -17,6 +17,7 @@ output:
 library(tidyverse)
 library(glue)
 library(pagedown)
+library(kableExtra)
 
 # parameters
 nRecent = 10 # Include observations from nRecent last years
@@ -135,82 +136,132 @@ We hope that organizing the guide in this way will help you connect the birds yo
 
 \newpage
 
+## Advent
+
+A time of waiting, yearning, and reflecting. Advent comes in late November or early December to mark the start of the Christian calendar. As we wait patiently for God's renewal, we call out: O come and make all things new. O come, o come, Emmanuel.
+
+Advent can be a quiet birding season. Most have migrated south to warmer climates for the winter. Of the birds that you might see, most will have muted colors reflecting the winter environment around them (but keep an eye out for the occasional flash of color). Even though most birds you may see in Advent are not very colorful, they tend to be relatively large, making them easy to spot. You will likely see some members of the duck, geese, and swan family floating on calmer waters or flying overhead. You may even hear the ducks making typical duck sounds. *-e*
+
+\newpage
+
+&nbsp;
+
 ```{r echo=FALSE, results='asis'}
-# Templates for sections
+season_birds <- df |> 
+  filter(typicalSeason == "Lent") |> 
+  mutate(photo_path = as.character(photo_path),
+         text = paste0("<b>", comName, "</b><br><i>", birdFamily, "</i><br>", 
+                       description, "<br><br>"),
+         image = "")
 
-season_template <- "\n\n## %s 
+img_paths <- season_birds |> 
+  pull(photo_path)
 
-_________________
+season_birds |>
+  select(image, text) |>
+  kbl(booktabs = T, escape = F, col.names = NULL, longtable = T) |>
+  kable_styling(font_size = 12, latex_options = "basic") |>
+  column_spec(1, image = img_paths)
+```
 
-%s 
+\newpage
 
-\\newpage
-"
+## Christmas
 
-# putting this in the top of the page
-fam_template <- "### %s {.unlisted}\n"
+Representing the time between December 25 and January 5 (the day before Epiphany), Christmas focuses us on the gift of the Incarnation, when God took on flesh and took the form of a human. I think of this as God's definitive pronouncement that creation is good and expresses God's nature as one who gives good gifts.
 
-# the page layout
-# arguments are:
-# Bird name (title case)
-# Bird picture (40% width)
-# Bird description
+The quiet and cold that comes with this time of year means that few species of birds are around. Perhaps to highlight the gift-nature of the season, you can regard each bird you see as a rare gift. *-k*"
 
-species_template <- 
-"#### %s {.unlisted}
+\newpage
 
-![](%s){width=40%%}
+&nbsp;
 
-%s
+```{r echo=FALSE, results='asis'}
+```
 
-\\newpage
-"
-
-# Render sections
-for (i in season$typicalSeason) {
-  
-  # Get current season
-  season_current <- i
-  
-  # Get birds in current season
-  birds_current <- df |> 
-    filter(typicalSeason == season_current)
-  
-  # Get families in this season
-  fams <- birds_current |> 
-    select(birdFamily) |> 
-    distinct()
-  
-  # Get season reflection
-  season_reflection <- season |> 
-    filter(typicalSeason == season_current) |> 
-    pull(reflection)
-  
-  # Print season section header
-  cat(sprintf(season_template, season_current, season_reflection))
-  
-  # For each family within the season, create a section
-  for (j in fams$birdFamily) {
-    
-    # Get current family
-    fam_current <- j
-    
-    # Print family section header
-    cat(sprintf(fam_template, fam_current))
-    
-    # Get birds within that family
-    birds_in_fam <- birds_current |> 
-      filter(birdFamily == fam_current)
-    
-    # For all species within family, print an entry
-    for (k in 1:nrow(birds_in_fam)) {
-      cat(sprintf(species_template,
-                  birds_in_fam$comName[k],
-                  birds_in_fam$photo_path[k],
-                  birds_in_fam$description[k]
-                  )
-          )
-      }
-  }
-}
+```{r echo=FALSE, results='asis'}
+# # Templates for sections
+# 
+# season_template <- "\n\n## %s 
+# 
+# _________________
+# 
+# %s 
+# 
+# \\newpage
+# "
+# 
+# # putting this in the top of the page
+# fam_template <- "### %s {.unlisted}\n"
+# 
+# # the page layout
+# # arguments are:
+# # Bird name (title case)
+# # Bird picture (40% width)
+# # Bird description
+# 
+# species_template <- 
+# "#### %s {.unlisted}
+# 
+# ![](%s){width=40%%}
+# 
+# %s
+# 
+# \\newpage
+# "
+# 
+# # Render sections
+# for (i in season$typicalSeason) {
+#   
+#   # Get current season
+#   season_current <- i
+#   
+#   # Get birds in current season
+#   birds_current <- df |> 
+#     filter(typicalSeason == season_current)
+#   
+#   # Get families in this season
+#   fams <- birds_current |> 
+#     select(birdFamily) |> 
+#     distinct()
+#   
+#   # Get season reflection
+#   season_reflection <- season |> 
+#     filter(typicalSeason == season_current) |> 
+#     pull(reflection)
+#   
+#   # Print season section header
+#   cat(sprintf(season_template, season_current, season_reflection))
+#   
+#   # For each family within the season, create a section
+#   for (j in fams$birdFamily) {
+#     
+#     # Get current family
+#     fam_current <- j
+#     
+#     # Print family section header
+#     cat(sprintf(fam_template, fam_current))
+#     
+#     # Get birds within that family
+#     birds_in_fam <- birds_current |> 
+#       filter(birdFamily == fam_current)
+#     
+#     # For all species within family, print an entry
+#     # for (k in 1:nrow(birds_in_fam)) {
+#     #   cat(sprintf(species_template,
+#     #               birds_in_fam$comName[k],
+#     #               birds_in_fam$photo_path[k],
+#     #               birds_in_fam$description[k]
+#     #               )
+#     #       )
+#     #   }
+#     # birds_in_fam |> 
+#     #   mutate(pic = NULL) |> 
+#     #   select(pic, description) |> 
+#     #   kbl(booktabs = T, align = "c") |> 
+#     #   kable_styling() |> 
+#     #   kable_paper(full_width = T) |> 
+#     #   column_spec(1, image = spec_image(birds_in_fam$photo, 20, 20))
+#   }
+# }
 ```
