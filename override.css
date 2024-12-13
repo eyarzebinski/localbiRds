@@ -27,3 +27,10 @@ p {
   margin-left: .5in;
   margin-right: .5in;
 }
+
+/* Custom table styles */
+table { page-break-inside:auto; }
+tr    { page-break-inside:avoid; page-break-after:auto }
+table tr:nth-child(even) {
+  background-color: white;
+}

@@ -19,6 +19,9 @@ library(glue)
 library(pagedown)
 library(kableExtra)
 
+# Load function to render tables
+source(file = "render_fieldguide_table.R")
+
 # parameters
 nRecent = 10 # Include observations from nRecent last years
 yearMax = 2023 # last full year of observations
@@ -147,21 +150,7 @@ Advent can be a quiet birding season. Most have migrated south to warmer climate
 &nbsp;
 
 ```{r echo=FALSE, results='asis'}
-season_birds <- df |> 
-  filter(typicalSeason == "Lent") |> 
-  mutate(photo_path = as.character(photo_path),
-         text = paste0("<b>", comName, "</b><br><i>", birdFamily, "</i><br>", 
-                       description, "<br><br>"),
-         image = "")
-
-img_paths <- season_birds |> 
-  pull(photo_path)
-
-season_birds |>
-  select(image, text) |>
-  kbl(booktabs = T, escape = F, col.names = NULL, longtable = T) |>
-  kable_styling(font_size = 12, latex_options = "basic") |>
-  column_spec(1, image = img_paths)
+render_fieldguide_table("Advent")
 ```
 
 \newpage
@@ -177,91 +166,85 @@ The quiet and cold that comes with this time of year means that few species of b
 &nbsp;
 
 ```{r echo=FALSE, results='asis'}
+render_fieldguide_table("Christmas")
 ```
 
+\newpage
+
+## Epiphany
+
+Starting on January 6 and extending until Lent, Epiphany celebrates the manifestation of Jesus to the world. It is a time for the world to recognize and receive its rightful King, if only it knows where to look. How fitting that it coincides with the end of winter, when those who look carefully can see the first hints of new life returning.
+
+When there is snow on the ground, keep an eye on any low-to-mid height bushes as a place where the smaller birds congregate - especially if it is a berry bush! On particularly sunny days, you may see the typically skittish sparrows linger in the warm rays of sunlight. Keep an eye on dead, open tree branches or in the open sky to see hawks. *-e*
+
+\newpage
+
+&nbsp;
+
 ```{r echo=FALSE, results='asis'}
-# # Templates for sections
-# 
-# season_template <- "\n\n## %s 
-# 
-# _________________
-# 
-# %s 
-# 
-# \\newpage
-# "
-# 
-# # putting this in the top of the page
-# fam_template <- "### %s {.unlisted}\n"
-# 
-# # the page layout
-# # arguments are:
-# # Bird name (title case)
-# # Bird picture (40% width)
-# # Bird description
-# 
-# species_template <- 
-# "#### %s {.unlisted}
-# 
-# ![](%s){width=40%%}
-# 
-# %s
-# 
-# \\newpage
-# "
-# 
-# # Render sections
-# for (i in season$typicalSeason) {
-#   
-#   # Get current season
-#   season_current <- i
-#   
-#   # Get birds in current season
-#   birds_current <- df |> 
-#     filter(typicalSeason == season_current)
-#   
-#   # Get families in this season
-#   fams <- birds_current |> 
-#     select(birdFamily) |> 
-#     distinct()
-#   
-#   # Get season reflection
-#   season_reflection <- season |> 
-#     filter(typicalSeason == season_current) |> 
-#     pull(reflection)
-#   
-#   # Print season section header
-#   cat(sprintf(season_template, season_current, season_reflection))
-#   
-#   # For each family within the season, create a section
-#   for (j in fams$birdFamily) {
-#     
-#     # Get current family
-#     fam_current <- j
-#     
-#     # Print family section header
-#     cat(sprintf(fam_template, fam_current))
-#     
-#     # Get birds within that family
-#     birds_in_fam <- birds_current |> 
-#       filter(birdFamily == fam_current)
-#     
-#     # For all species within family, print an entry
-#     # for (k in 1:nrow(birds_in_fam)) {
-#     #   cat(sprintf(species_template,
-#     #               birds_in_fam$comName[k],
-#     #               birds_in_fam$photo_path[k],
-#     #               birds_in_fam$description[k]
-#     #               )
-#     #       )
-#     #   }
-#     # birds_in_fam |> 
-#     #   mutate(pic = NULL) |> 
-#     #   select(pic, description) |> 
-#     #   kbl(booktabs = T, align = "c") |> 
-#     #   kable_styling() |> 
-#     #   kable_paper(full_width = T) |> 
-#     #   column_spec(1, image = spec_image(birds_in_fam$photo, 20, 20))
-#   }
-# }
+render_fieldguide_table("Epiphany")
 ```
+
+\newpage
+
+## Lent
+
+Lent starts in February or March, and is a time for contemplation and self-denial. Spring is at hand, but it is not yet time to celebrate. That comes later, only after taking up our cross and following Jesus, the Man of Sorrows.
+
+Likewise, it is too early to welcome the full range of migrating birds. Some new birds will start appearing, but many of them are draped in the dull plumage of their winter counterparts, demanding discipline to identify. *-k*
+
+\newpage
+
+&nbsp;
+
+```{r echo=FALSE, results='asis'}
+render_fieldguide_table("Lent")
+```
+
+\newpage
+
+## Easter
+
+Easter, starting in March or April, is the time we have been waiting for all year. Jesus is alive! The Resurrection declares that Jesus is the world's rightful King. Death no longer has the final say, and God has turned creation right side up.
+
+The earth reflects this reality, too, as the full bloom of spring arrives to defeat the cold of winter. You may see the snow start to melt and hydrate the earth. You may see trees and early spring flowers start to bud and bloom. Easter season typically includes the peak of spring migration. Many of these birds are decked out in colorful plumage, as if wearing their Easter best! *-e*
+
+\newpage
+
+&nbsp;
+
+```{r echo=FALSE, results='asis'}
+render_fieldguide_table("Easter")
+```
+
+\newpage
+
+## Ordinary Time (Early)
+
+Ordinary Time begins with a rush from the high of Easter, and quickly moves into Pentecost and Ascension day. For the purposes of this bird guide, we folded Pentecost and Ascension into Ordinary Time, and split Ordinary Time into two halves: early and late.
+
+Maybe you are putting away your celebratory white or red linens and exchanging them for green ones. The work of God and the Church continues, and so do the birds. *-e*
+
+\newpage
+
+&nbsp;
+
+```{r echo=FALSE, results='asis'}
+render_fieldguide_table("Ordinary Time (early)")
+```
+
+\newpage
+
+## Ordinary Time (Late)
+
+Ordinary Time continues as the long, hot summer days slowly turn into shorter, colder ones. During this time, the birds will sense this change and start their long journey south towards warmer weather.  The migration season signals a sharp change in the numbers and types of birds you will see. But take heart; although we see them leave during this season, we trust in the God who rules over time and space. In God's wisdom, the birds will return in their raucous joy come Spring. *-e*
+
+\newpage
+
+&nbsp;
+
+```{r echo=FALSE, results='asis'}
+render_fieldguide_table("Ordinary Time (late)")
+```
+
+\newpage
